@@ -1,0 +1,38 @@
+Return-path: <>
+Envelope-to: learnscienceco@cloudlinux2.suryanandan.net
+Delivery-date: Sat, 11 Jul 2015 06:07:43 -0500
+Received: from mailnull by cloudlinux2.suryanandan.net with local (Exim 4.85)
+	id 1ZDsdD-001bkB-QS
+	for learnscienceco@cloudlinux2.suryanandan.net; Sat, 11 Jul 2015 06:07:43 -0500
+X-Failed-Recipients: pallavi.more@c9live.com
+Auto-Submitted: auto-replied
+From: Mail Delivery System <Mailer-Daemon@cloudlinux2.suryanandan.net>
+To: learnscienceco@cloudlinux2.suryanandan.net
+Subject: Mail delivery failed: returning message to sender
+Message-Id: <E1ZDsdD-001bkB-QS@cloudlinux2.suryanandan.net>
+Date: Sat, 11 Jul 2015 06:07:43 -0500
+
+This message was created automatically by mail delivery software.
+
+A message that you sent could not be delivered to one or more of its
+recipients. This is a permanent error. The following address(es) failed:
+
+  pallavi.more@c9live.com
+    host mx-indiabiz.mail.gm0.yahoodns.net [106.10.149.139]
+    SMTP error from remote mail server after end of data:
+    554 delivery error: dd Sorry your message to pallavi.more@c9live.com cannot be delivered. This account has been disabled or discontinued [#100]. - mta1002.biz.mail.sg3.yahoo.com
+
+------ This is a copy of the message, including all the headers. ------
+
+Return-path: <learnscienceco@cloudlinux2.suryanandan.net>
+Received: from learnscienceco by cloudlinux2.suryanandan.net with local (Exim 4.85)
+	(envelope-from <learnscienceco@cloudlinux2.suryanandan.net>)
+	id 1ZDsdA-001bj4-AG
+	for pallavi.more@c9live.com; Sat, 11 Jul 2015 06:07:40 -0500
+To: pallavi.more@c9live.com
+Subject: Need to improve in...
+Message-Id: <E1ZDsdA-001bj4-AG@cloudlinux2.suryanandan.net>
+From: learnscienceco@cloudlinux2.suryanandan.net
+Date: Sat, 11 Jul 2015 06:07:40 -0500
+
+You need to practice following concepts : ,Neutralization,Introduction to pH,                                              Ionization of water,                                                Reactions of acids, Acids,                                                 bases

@@ -1,0 +1,42 @@
+Return-path: <>
+Envelope-to: learnscienceco@cloudlinux2.suryanandan.net
+Delivery-date: Tue, 04 Aug 2015 02:28:41 -0500
+Received: from mailnull by cloudlinux2.suryanandan.net with local (Exim 4.85)
+	id 1ZMWeP-0025Ea-4R
+	for learnscienceco@cloudlinux2.suryanandan.net; Tue, 04 Aug 2015 02:28:41 -0500
+X-Failed-Recipients: rahul@gmail.com
+Auto-Submitted: auto-replied
+From: Mail Delivery System <Mailer-Daemon@cloudlinux2.suryanandan.net>
+To: learnscienceco@cloudlinux2.suryanandan.net
+Subject: Mail delivery failed: returning message to sender
+Message-Id: <E1ZMWeP-0025Ea-4R@cloudlinux2.suryanandan.net>
+Date: Tue, 04 Aug 2015 02:28:41 -0500
+
+This message was created automatically by mail delivery software.
+
+A message that you sent could not be delivered to one or more of its
+recipients. This is a permanent error. The following address(es) failed:
+
+  rahul@gmail.com
+    host gmail-smtp-in.l.google.com [74.125.129.26]
+    SMTP error from remote mail server after RCPT TO:<rahul@gmail.com>:
+    550-5.1.1 The email account that you tried to reach does not exist. Please try
+    550-5.1.1 double-checking the recipient's email address for typos or
+    550-5.1.1 unnecessary spaces. Learn more at
+    550 5.1.1  https://support.google.com/mail/answer/6596 xq1si279736pab.139 - gsmtp
+
+------ This is a copy of the message, including all the headers. ------
+
+Return-path: <learnscienceco@cloudlinux2.suryanandan.net>
+Received: from learnscienceco by cloudlinux2.suryanandan.net with local (Exim 4.85)
+	(envelope-from <learnscienceco@cloudlinux2.suryanandan.net>)
+	id 1ZMWeN-0025EN-LX
+	for rahul@gmail.com; Tue, 04 Aug 2015 02:28:39 -0500
+To: rahul@gmail.com
+Subject: email verification
+From: noreply@learnscience.co.in
+Message-Id: <E1ZMWeN-0025EN-LX@cloudlinux2.suryanandan.net>
+Date: Tue, 04 Aug 2015 02:28:39 -0500
+
+Thank you for register in quiz
+your password is= qwerty

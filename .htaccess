@@ -1,0 +1,32 @@
+#Error Document
+ErrorDocument 404 http://learnscience.co.in/page_not_found.php
+
+
+#Redirect
+#Redirect /Pranil/learnscience/www/css/ http://localhost/Pranil/learnscience/www/
+
+#Password Protected
+#AuthUserFile .\.htpasswds\.htpasswd
+#AuthType Basic
+#AuthName "My Secret Folder"
+#Require valid-user
+
+#Deny Ip address
+#order allow,deny
+#allow from  192.168.0.105
+#deny from all
+
+
+#RewriteEngine on
+#RewriteCond %{HTTP_REFERER} !^$
+#RewriteCond %{HTTP_REFERER} !^http://localhost/learnscience/www/.*$ [NC]
+#RewriteRule \.(gif|jpg)$ http://localhost/learnscience/www/index.php [R,L]
+
+DirectoryIndex index.php
+
+#IndexIgnore *
+
+#AddType application/octet-stream .zip .mp3 .mp4
+
+#php_value post_max_size 30M
+#php_value upload_max_filesize 30M

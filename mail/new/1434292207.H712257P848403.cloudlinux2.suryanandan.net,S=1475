@@ -1,0 +1,35 @@
+Return-path: <>
+Envelope-to: learnscienceco@cloudlinux2.suryanandan.net
+Delivery-date: Sun, 14 Jun 2015 09:30:07 -0500
+Received: from mailnull by cloudlinux2.suryanandan.net with local (Exim 4.85)
+	id 1Z48vH-003Yhm-D9
+	for learnscienceco@cloudlinux2.suryanandan.net; Sun, 14 Jun 2015 09:30:07 -0500
+X-Failed-Recipients: noreply@learnscience.co.in
+Auto-Submitted: auto-replied
+From: Mail Delivery System <Mailer-Daemon@cloudlinux2.suryanandan.net>
+To: learnscienceco@cloudlinux2.suryanandan.net
+Subject: Mail delivery failed: returning message to sender
+Message-Id: <E1Z48vH-003Yhm-D9@cloudlinux2.suryanandan.net>
+Date: Sun, 14 Jun 2015 09:30:07 -0500
+
+This message was created automatically by mail delivery software.
+
+A message that you sent could not be delivered to one or more of its
+recipients. This is a permanent error. The following address(es) failed:
+
+  noreply@learnscience.co.in
+
+------ This is a copy of the message, including all the headers. ------
+
+Return-path: <learnscienceco@cloudlinux2.suryanandan.net>
+Received: from learnscienceco by cloudlinux2.suryanandan.net with local (Exim 4.85)
+	(envelope-from <learnscienceco@cloudlinux2.suryanandan.net>)
+	id 1Z2K6e-001bHb-1n
+	for noreply@learnscience.co.in; Tue, 09 Jun 2015 09:02:20 -0500
+To: noreply@learnscience.co.in
+Subject: email verification
+from: pranilmhatr1990@gmail.com
+Message-Id: <E1Z2K6e-001bHb-1n@cloudlinux2.suryanandan.net>
+Date: Tue, 09 Jun 2015 09:02:20 -0500
+
+This is another feedback msg.

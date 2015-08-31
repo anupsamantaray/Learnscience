@@ -1,0 +1,417 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Home</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" media="screen" href="css/style1.css">
+
+<link rel="stylesheet" type="text/css" href="styles.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="demo.css" media="all" />
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <!-- FlexSlider -->
+    <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+    var $ = jQuery.noConflict();
+    $(window).load(function() {
+    $('.flexslider').flexslider({
+          animation: "fade"
+    });
+	
+	$(function() {
+		$('.show_menu').click(function(){
+				$('.menu').fadeIn();
+				$('.show_menu').fadeOut();
+				$('.hide_menu').fadeIn();
+		});
+		$('.hide_menu').click(function(){
+				$('.menu').fadeOut();
+				$('.show_menu').fadeIn();
+				$('.hide_menu').fadeOut();
+		});
+	});
+  });
+</script>
+<!-----pop up------>
+<script type="text/javascript" src="js/jquery.reveal.js"></script>
+<link rel="stylesheet" href="css/reveal.css">
+<!-----pop up ned------>
+	
+
+</head>
+<body style="background:#ccc; background:url(images/bg04.png) repeat #ccc;">
+ <!--------------top bar -------->
+ <div id="top_bar">
+ 		<div id="top_box">
+		
+		</div>
+ </div>
+ <!--------------top bar end-------->
+
+ <!--------------header bar -------->
+<div id="header">
+		<div id="header-bar">
+			<div id="header-box1">
+				<div class="logo">
+						<a href="index.html">
+								<img src="image/logo.png" width="170" border="0" alt="logo" />						
+						</a>				
+				</div>
+				<div id="search-box" style="float:right; margin-top:10px;">
+						<table style="width:100%; height:110px;">
+								<tr>
+										<td><input type="text" name=""  value=""  class="form2"/></td>
+										<td colspan="2"><input type="button" name="" value="Search" class="button1" style="background:#f8a72a; border:1px solid #ae6b03;"  /></td>
+								</tr>
+								<tr>
+										<td align="right">
+												<select  style="width:120px; padding:3px; border:1px solid #ccc;">
+														<option>
+																Select
+														</option>
+												</select>
+												<a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade"><input type="button" name="" value="Create Account" class="button1" style="background:#27ab60; border-radius:3px; border:1px solid #228c4a; width:120px;"/>
+												</a>
+												
+										</td>
+								  <td colspan="2">
+								  		<a href="login.php"><input type="button" name="" value="Log In" class="button1" style="background:#69a4ce; border-radius:3px; border:1px solid #5589b0;"/></a>
+										</td>
+								</tr>
+								<tr>
+										<td align="right" colspan="2"><img src="image/2.png"  /> <img src="image/4.png"  /></td>
+										<td><img src="image/3.png"  /></td>
+								</tr>
+						</table>
+						</div>
+				</div>
+		</div>
+</div>
+<!----pop up------>
+<div id="myModal" class="reveal-modal" style="width:400px;">
+		<h1 style="font-size:20px;">Create Account</h1>
+		<form name="creataccount" action="creataction.php" method="post">
+		<table style="width:100%; height:250px; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#333;">
+				<tr>
+						<td>Name (login id)</td>
+						<td><input type="text" name="name" id="name"  class="form2"/></td>
+				</tr>
+				<tr>
+						<td>Email</td>
+						<td><input type="text" name="email" id="email"  class="form2"/></td>
+				</tr>
+				<tr>
+						<td>Contact</td>
+						<td><input type="text" name="phone" id="phone" class="form2"/></td>
+				</tr>
+				<tr>
+						<td>Class</td>
+						<td><input type="text" name="class" id="class"  class="form2"/></td>
+				</tr>
+				<tr>
+						<td>Password</td>
+						<td><input type="password" name="pass" id="pass" class="form2"/></td>
+				</tr>
+
+				<tr>
+						<td>
+								<input type="submit" name="button" value="Log In" class="button1" style="background:#69a4ce; border-radius:3px; border:1px solid #5589b0;"/>
+						</td>
+				</tr>
+		</table>
+		<a class="close-reveal-modal">&#215;</a>
+		</form>
+</div>
+<!----pop up end------>
+
+ <!--------------header bar end -------->
+  
+  <!--------------menu bar -------->
+
+   				 <div id="color-menubar">
+						<div id="color-menu">
+								<div id="color-menubox1">
+										<ul>
+												<li style="background:#073974;"><a href="courses/index.php" class="active">courses</a></li>
+												<li style="background:#517e09;"><a href="#">Lessons</a></li>
+												<li style="background:#c57b0e;"><a href="#">Remember Cards</a></li>
+												<li style="background:#c61831;"><a href="#">Videos</a></li>
+												<li style="background:#671142;"><a href="#">Quizzes</a></li>
+												<li style="background:#0a2342; width:175px;"><a href="#">Games</a></li>
+										</ul>
+								</div>
+						</div>
+				 </div>
+
+<!--------------menu bar end -------->  
+  
+   <!--------------banner bar --------> 
+ <div id="banner-bar" style="height:350px; margin-top:10px;">
+ 		<div id="banner1">
+				<div class="slider_container">
+		<div class="flexslider">
+	      <ul class="slides">
+	    	<li>
+	    		<a href="http://www.freshdesignweb.com"><img src="images/slider/slide1.jpg" width="980" height="330" alt="" title=""/></a>
+	    		<div class="flex-caption">
+                     <div class="caption_title_line"><h2>Demo Heaading</h2><p>This is demo text. To be modified with real content later.</p></div>
+                </div>
+	    	</li>
+	    	<li>
+	    		<a href="http://www.freshdesignweb.com"><img src="images/slider/slide2.jpg" width="980" height="330" alt="" title=""/></a>
+	    		<div class="flex-caption">
+                     <div class="caption_title_line"><h2>Demo Heaading</h2><p>This is demo text. To be modified with real content later.This is demo text. To be modified with real content later.</p></div>
+                </div>
+	    	</li>
+	    	<li>
+	    		<a href="http://www.freshdesignweb.com"><img src="images/slider/slide3.jpg" width="980" height="330" alt="" title=""/></a>
+	    		<div class="flex-caption">
+                     <div class="caption_title_line"><h2>Demo Heaading</h2><p>This is demo text. To be modified with real content later.This is demo text. To be modified with real content later.This is demo text. To be modified with real content later.</p></div>
+                </div>
+	    	</li>
+	    	
+	    </ul>
+	  </div>
+   </div>
+		</div>
+		<div id="banner-box">
+				<div id="form-box" style="background:none; border:none;">
+						<div class="head3" style="font-weight:normal; text-align:center; margin-left:0px; background:#fff;">
+								Join now for FREE
+						</div>
+						<form name="creatacc" action="creataction.php" method="post">
+						<div id="form-box2" style="background:#fff;">
+								<table id="form-table">
+										<tr>
+												<td colspan="4"><input type="text" name="name" value="" placeholder="Name" class="form" required/></td>
+										</tr>
+										<tr>
+												<td colspan="4"><input type="text" name="email" value="" placeholder="Email" class="form" required/></td>
+										</tr>
+											<tr>
+												<td colspan="4"><input type="text" name="phone" value="" placeholder="Phone" class="form" required/></td>
+										</tr>
+										<tr>
+												<td colspan="4"><input type="text" name="class" value="" placeholder="Class" class="form" required/></td>
+										</tr>
+										<tr>
+												<td colspan="4"><input type="password" name="pass" value="" placeholder="password" class="form" required/></td>
+										</tr>
+										<!--<tr>
+												<td colspan="4"><select class="form"><option>Select</option></select></td>
+										</tr>-->
+										
+										<tr>
+												<td colspan="4"><input type="submit" name="button" value="Join Now" class="button" /></td>
+										</tr>
+								</table>
+						</form>
+						</div>
+						<div style="width:100%; height:50px; float:left; background:#000; background:url(image/bg1.png) no-repeat;">
+						
+						</div>
+				</div>
+		</div>
+ </div> 
+  <!--------------banner bar end-------->
+   
+<!--------------text line bar-------->
+<div id="textline_bar">
+		<div id="textline_box">
+				<p class="text" style="color:#fff; margin-left:60px; margin-top:10px; float:left; font-style:italic; "><img src="image/img2.jpg" style="float:left; border-radius:70px;"/>
+				<span style="margin-top:25px; float:left; margin-left:10px;">This is demo text. To be modified with real content later.<br /> This is demo text. To be modified with real content later.This is demo text. To be modified with real content later.</span> </p>
+		</div>
+</div>
+<!--------------text line end-------->
+
+<!--------------hover box-------->
+<div id="hover_bar">
+		<div id="hover_box">
+				<div id="hover_box2">
+				<section class="section products-section">
+		<div class="products-container wrapper" style="background:none; margin-bottom:0px;">
+			<style type="text/css" scoped="scoped">
+				ul#product-menu li { width: 151px }
+			</style>
+
+			<ul class="product-menu clearfix clear five" id="sti-menu">
+				<li>
+					<a href="http://preview.ait-themes.com/drivingschool/wp1/price-list-of-courses/">
+						<h3 class="product-item" data-type="mText">Heading Here</h3>
+						<div class="rotate-holder">
+						<span class="product-alternative-text">1</span>
+						</div>
+						<span class="product-icon product-item" data-type="icon">
+							<span class="icon-img" style="background: url('http\:\/\/preview\.ait-themes\.com\/drivingschool\/wp1\/wp-content\/uploads\/driving-theory4\.jpg') no-repeat center center"></span>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://preview.ait-themes.com/drivingschool/wp1/price-list-of-courses/">
+						<h3 class="product-item" data-type="mText">Heading Here</h3>
+						<div class="rotate-holder">
+						<span class="product-alternative-text">2</span>
+						</div>
+						<span class="product-icon product-item" data-type="icon">
+							<span class="icon-img" style="background: url('http\:\/\/preview\.ait-themes\.com\/drivingschool\/wp1\/wp-content\/uploads\/first-aid\.jpg') no-repeat center center"></span>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://preview.ait-themes.com/drivingschool/wp1/price-list-of-courses/">
+						<h3 class="product-item" data-type="mText">Heading Here</h3>
+						<div class="rotate-holder">
+						<span class="product-alternative-text">3</span>
+						</div>
+						<span class="product-icon product-item" data-type="icon">
+							<span class="icon-img" style="background: url('http\:\/\/preview\.ait-themes\.com\/drivingschool\/wp1\/wp-content\/uploads\/test-drive1\.jpg') no-repeat center center"></span>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://preview.ait-themes.com/drivingschool/wp1/price-list-of-courses/">
+						<h3 class="product-item" data-type="mText">Heading Here</h3>
+						<div class="rotate-holder">
+						<span class="product-alternative-text">4</span>
+						</div>
+						<span class="product-icon product-item" data-type="icon">
+							<span class="icon-img" style="background: url('http\:\/\/preview\.ait-themes\.com\/drivingschool\/wp1\/wp-content\/uploads\/examination\.jpg') no-repeat center center"></span>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="http://preview.ait-themes.com/drivingschool/wp1/price-list-of-courses/">
+						<h3 class="product-item" data-type="mText">Heading Here</h3>
+						<div class="rotate-holder">
+						<span class="product-alternative-text">5</span>
+						</div>
+						<span class="product-icon product-item" data-type="icon">
+							<span class="icon-img" style="background: url('http\:\/\/preview\.ait-themes\.com\/drivingschool\/wp1\/wp-content\/uploads\/happy-driver\.jpg') no-repeat center center"></span>
+						</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</section>
+		<div id="shadowbox">
+				<img src="image/big_shadow.png" style=" width:100%;"/>
+			</div>
+		</div>
+</div>
+<!--------------hover box end-------->
+ 
+ <!--------------content---------> 
+  <div id="content-menubar" style="display:none;">
+		<div id="content-menu">
+				<ul>
+						<li>
+								<h2 class="head1">Study</h2>
+								<p class="text">Videos, Animations and</p>
+						</li>
+						<li>
+								<h2 class="head1">Test</h2>
+								<p class="text">Videos, Animations and</p>
+						</li>
+						<li>
+								<h2 class="head1">Revise</h2>
+								<p class="text">Videos, Animations and</p>
+						</li>
+						<li>
+								<h2 class="head1">Subject</h2>
+								<p class="text">Videos, Animations and</p>
+						</li>
+						<li>
+								<h2 class="head1">Boards</h2>
+								<p class="text">Videos, Animations and</p>
+						</li>
+						<li>
+								<h2 class="head1">Study</h2>
+								<p class="text">Videos, Animations and</p>
+						</li>
+				</ul>
+		</div>
+ </div>
+ 
+ <div id="content-bar">
+ 		<div id="content">
+				<div class="content-box">
+				  <div class="content-box">
+								<div class="content-left">
+										<div style="width:100%; height:auto; float:left;">
+										<h1 class="head3" style="margin-top:0px; margin-bottom:10px;">Welcome to School.</h1>
+										<p class="text" style="line-height:1.6;">
+										<img src="image/img3.jpg" style="float:left; margin-right:10px; border:2px solid #c7c7c7;"/>
+										<span style="color:#0e8092; font-weight:bold; line-height:1.3; font-size:14px;">This is demo text. To be modified with real content later.</span>
+										<br /> 
+										This is demo text. To be modified with real content later.This is demo text. To be modified with real content later.This is demo text. To be modified with real content later.This is demo text. To be modified with real content later.This is demo text. To be modified with real content later.</p>
+										</div>
+										<div class="content-rightbox1" style=" width:94%;">
+												<div class="content-rightbox2" style="width:96%;">
+														<img src="image/img5.jpg" width="184" style=" border:2px solid #ccc;"/>
+														<img src="image/img6.jpg" width="184" style="margin-left:4px; border:2px solid #ccc;"/>
+														<img src="image/img7.jpg" width="184" style="margin-left:4px; border:2px solid #ccc;"  />
+												</div>
+										</div>
+								</div>
+								
+								<div class="content-right">
+										<h1 class="head3" style="margin-top:0px;">Latest News.</h1>
+										<div class="content-rightbox1">
+												<div class="content-rightbox2">
+														<div class="content-rightbox3">
+																<div class="colorbox">
+																		<img src="image/1.jpg" height="30"  /><br />
+																		OPEN DAY
+																</div>	
+																<div class="colorbox" style="margin-left:10px; background:#f8931f;">
+																		<img src="image/2.jpg" height="30"  /><br />
+																		ProspeCtus
+																</div>	
+														</div>
+														<div class="content-rightbox3">
+																<div class="colorbox" style="background:#7b9532;">
+																		<img src="image/3.jpg" height="30"  /><br />
+																		Campus info
+																</div>	
+																<div class="colorbox" style="margin-left:10px; background:#e9c21c;">
+																		<img src="image/4.jpg" height="30"  /><br />
+																		news & Events
+																</div>	
+														</div>
+														<div class="content-rightbox3">
+																<div class="colorbox" style="background:#c11f2e;">
+																		<img src="image/5.jpg" height="30"  /><br />
+																		student life
+																</div>	
+																<div class="colorbox" style="margin-left:10px; background:#615793;">
+																		<img src="image/6.jpg" height="30" /><br />
+																		the city
+																</div>	
+														</div>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+		</div>
+ </div>
+ <!--------------content bar emd---------> 
+ 
+ <!--------------footer---------> 
+ <div id="footer-bar">
+ 		<div id="footer">
+				<ul>
+						<li><a href="index.html" class="active"><span>Home</span></a></li>
+						<li><a href="work.html"><span>Work</span></a></li>
+						<li><a href="about.html"><span>About</span></a></li>
+						<li><a href="services.html"><span>Services</span></a></li>
+						<li><a href="contact.html"><span>Contact</span></a></li>
+				</ul>
+		</div>
+ </div>
+  <!--------------footer end---------> 
+  
+</body>
+</html>

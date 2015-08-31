@@ -1,0 +1,36 @@
+Return-path: <>
+Envelope-to: learnscienceco@cloudlinux2.suryanandan.net
+Delivery-date: Sat, 27 Dec 2014 21:23:48 -0600
+Received: from mailnull by cloudlinux2.suryanandan.net with local (Exim 4.84)
+	id 1Y54SJ-003mQP-Ud
+	for learnscienceco@cloudlinux2.suryanandan.net; Sat, 27 Dec 2014 21:23:48 -0600
+X-Failed-Recipients: fsplur@dcyizf.com
+Auto-Submitted: auto-replied
+From: Mail Delivery System <Mailer-Daemon@cloudlinux2.suryanandan.net>
+To: learnscienceco@cloudlinux2.suryanandan.net
+Subject: Mail delivery failed: returning message to sender
+Message-Id: <E1Y54SJ-003mQP-Ud@cloudlinux2.suryanandan.net>
+Date: Sat, 27 Dec 2014 21:23:47 -0600
+
+This message was created automatically by mail delivery software.
+
+A message that you sent could not be delivered to one or more of its
+recipients. This is a permanent error. The following address(es) failed:
+
+  fsplur@dcyizf.com
+    The mail server could not deliver mail to fsplur@dcyizf.com.  The account or domain may not exist, they may be blacklisted, or missing the proper dns entries.
+
+------ This is a copy of the message, including all the headers. ------
+
+Return-path: <learnscienceco@cloudlinux2.suryanandan.net>
+Received: from learnscienceco by cloudlinux2.suryanandan.net with local (Exim 4.84)
+	(envelope-from <learnscienceco@cloudlinux2.suryanandan.net>)
+	id 1Y54SI-003mPz-Lt
+	for fsplur@dcyizf.com; Sat, 27 Dec 2014 21:23:46 -0600
+To: fsplur@dcyizf.com
+Subject: email verification
+from: noreply@learnscience.co.in
+Message-Id: <E1Y54SI-003mPz-Lt@cloudlinux2.suryanandan.net>
+Date: Sat, 27 Dec 2014 21:23:46 -0600
+
+Thank you for contacting us
