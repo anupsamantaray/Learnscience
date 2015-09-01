@@ -199,11 +199,11 @@ color:#666;
 	cursor: pointer;
 }
 .list a:hover{
- color: rgb(0, 112, 176);
+color: rgb(0, 112, 176);
 text-decoration:none;
 }
-.active{
-     background: #efefef;
+.list a.active{
+    background-color: #efefef !important;
     color: rgb(0, 112, 176);
 }
 #container_right{

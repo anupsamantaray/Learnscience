@@ -77,61 +77,55 @@ function topval(subval,topvals,clval)
 </script>
 </head>
 <body onload="getval('9')">
-  
-<?php include_once('header1.php')?>
-    <div id="container">
-        <div id="container_content">
-            <div id="page">
-                <div id="container_left">
-                    <div class="heading">
-                        <h3>All Class</h3>
-                        
-                    </div>
-		      <ul style="margin-left: 0px; padding: 5px;">
-			<?php
-			$fet=mysql_query("select * from `student_class`");
-			while($res=mysql_fetch_array($fet))
-			{
-			 if($res['class']=='x'){
-			?>
+	<?php include_once('header1.php')?>
+	<div id="container">
+		<div id="container_content">
+			<div id="page">
+				<div id="container_left">
+					<div class="heading">
+						<h3>All Class</h3>
+					</div>
+					<ul style="margin-left: 0px; padding: 5px;">
+						<?php
+						$fet=mysql_query("select * from `student_class`");
+						while($res=mysql_fetch_array($fet))
+						{
+						if($res['class']=='x'){
+						?>
 						<li class="list active">
-                           <img src="images/arrow.png" style="float: left; margin-right: 5px;" />
-							<span class="sp" style="color: #0070B0;" onclick="return getval(<?php echo $res['id'];?>);"> Class <?php echo $res['class'];?></span>
-                        </li>
-			<?php
-			}
-			else{
-			?>
-                        <li class="list ">
-                            <img src="images/arrow.png" style="float: left; margin-right: 5px;" />
-							<span class="sp" style="color:#666;" onclick="return getval(<?php echo $res['id'];?>);">Class <?php echo $res['class'];?></span>
-                        </li>
-			<?php 
-			}
-			}
-			?>
-                    </ul>
-                </div>
-                <div id="container_right" class="t1">
-		  
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="myModal" class="reveal-modal">
-	<div class="vide">
-				
+						   <img src="images/arrow.png" style="float: left; margin-right: 5px;" />
+							<span class="sp" onclick="return getval(<?php echo $res['id'];?>);"> Class <?php echo $res['class'];?></span>
+						</li>
+						<?php
+						}
+						else{
+						?>
+						<li class="list">
+							<img src="images/arrow.png" style="float: left; margin-right: 5px;" />
+							<span class="sp" onclick="return getval(<?php echo $res['id'];?>);">Class <?php echo $res['class'];?></span>
+						</li>
+						<?php 
+							}
+						}
+						?>
+					</ul>
+				</div>
+				<div id="container_right" class="t1">
+				</div>
+			</div>
+		</div>
 	</div>
-	<a class="close-reveal-modal">&#215;</a>
-    </div>
-    <div id="myModal1" class="reveal-modal" style="width:400px;">
-	<div class="vide">
-	 Exams are made easy through unique teaching tools in our website. So Students ..no more fear.. !!
-Our educational content is created in a way to improvise the speed and ease of learning by any student of any talent level. Even a weak student can easily cross the exam hurdles by following our education content. A few hours study on our website  in exam time can help you easily pass and excel in the exam.. "			
+	<div id="myModal" class="reveal-modal">
+		<div class="vide"></div>
+		<a class="close-reveal-modal">&#215;</a>
 	</div>
-	<a class="close-reveal-modal">&#215;</a>
-    </div>
-    
-   <?php include_once('footer.php')?>
+	<div id="myModal1" class="reveal-modal" style="width:400px;">
+		<div class="vide">
+			Exams are made easy through unique teaching tools in our website. So Students ..no more fear.. !!
+			Our educational content is created in a way to improvise the speed and ease of learning by any student of any talent level. Even a weak student can easily cross the exam hurdles by following our education content. A few hours study on our website  in exam time can help you easily pass and excel in the exam.. "			
+		</div>
+		<a class="close-reveal-modal">&#215;</a>
+	</div>
+	<?php include_once('footer.php')?>
 </body>
 </html>
