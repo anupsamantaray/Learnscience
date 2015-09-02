@@ -25,7 +25,7 @@ include_once("../function.php");
                               {
                                 $tid=$res2['id'];
                               //echo "select * from `student_topic` where `class_id`='$class' and `subject_id`='$subid'";
-                              $fet3=mysql_query("select * from `extra_detail` where `class_id`='$class' and `subject_id`='$subid' and `topic_id`='$tid'");
+                              $fet3=mysql_query("select * from `extra_detail` where `class_id`='$class' and `subject_id`='$subid' and `topic_id`='$tid' AND ebook!=''");
 							  $nu=mysql_num_rows($fet3);
 							  if($nu>0){
                               while($res3=mysql_fetch_array($fet3))

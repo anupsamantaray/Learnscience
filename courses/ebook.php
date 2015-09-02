@@ -57,208 +57,184 @@ alert("please login to download");
 </script>
 </head>
 <body>
-  <?php include_once('header.php')?>
-
-    
+	<?php include_once('header.php')?>
     <div id="container">
         <div id="container_content">
             <div id="page">
                 <div id="container_left">
                     <div class="heading">
                         <h3>All Class</h3>
-                        
                     </div>
 					<?php
 					if(isset($_GET['clid'])){
-					?>
-					<ul style="margin-left: 0px; padding: 5px; ">
+						?>
+						<ul style="margin-left: 0px; padding: 5px; ">
+							<?php
+							   $sqlcla=mysql_query("select * from `student_class` where `id`='$idd'");
+							   $rescla=mysql_fetch_array($sqlcla);
+							?>
+							<li class="list active">
+							   <img src="images/arrow.png" style="float: left; margin-right: 5px;" />
+							   <a href="#"><span class="sp" style="color: #0070B0;" onclick="return getval(<?php echo $idd;?>);"> Class <?php echo $rescla['class'];?></span></a>
+							</li>
+						</ul>
 					<?php
-					
-						   $sqlcla=mysql_query("select * from `student_class` where `id`='$idd'");
-						   $rescla=mysql_fetch_array($sqlcla);
-						  
-					?>
-						<li class="list active">
-                           <img src="images/arrow.png" style="float: left; margin-right: 5px;" />
-						   <a href="#"><span class="sp" style="color: #0070B0;" onclick="return getval(<?php echo $idd;?>);"> Class <?php echo $rescla['class'];?></span></a>
-                        </li>
-					</ul>
-					<?php
-					}
-					else{
+					}else{
 					?>					
-					
-                    <ul style="margin-left: 0px; padding: 5px;">
-                      <?php
-                      $fetch=mysql_query("select * from `student_class`");
-                      while($receive=mysql_fetch_array($fetch))
-                      {
-					   if($receive['class']=='x'){
-                     ?>
-					  <li class="list active">
-                          <!-- <a href="ebook.php?class=<?php echo $receive['class'];?>">-->
-						   <img src="images/arrow.png" style="float:left; margin-right: 5px;" />
-						  <a href="#"><span class="sp" style="color: #0070B0;" onclick="return getebkval(<?php echo $receive['id'];?>);"> Class <?php echo $receive['class'];?></span></a>
-						   <!--</a>-->
-                        </li>
-					 <?php
-						}
-						 else
-						 {
-						?>
-						 <li class="list active">
-                          <!-- <a href="ebook.php?class=<?php echo $receive['class'];?>">-->
-						   <img src="images/arrow.png" style="float: none; margin-right: 5px;" />
-						  <a href="#"><span class="sp" style="color: #666;" onclick="return getebkval(<?php echo $receive['id'];?>);"> Class <?php echo $receive['class'];?></span></a>
-						   <!--</a>-->
-                        </li>
-                        <?php
-						}
-						}
-						?>
-                    </ul>
+						<ul style="margin-left: 0px; padding: 5px;">
+						  <?php
+						  $fetch=mysql_query("select * from `student_class`");
+							while($receive=mysql_fetch_array($fetch)){
+								if($receive['class']=='x'){
+									?>
+									<li class="list active">
+									  <!-- <a href="ebook.php?class=<?php echo $receive['class'];?>">-->
+									   <img src="images/arrow.png" style="float:left; margin-right: 5px;" />
+									  <a href="javascript:void(0)"><span class="sp" style="color: #0070B0;" onclick="return getebkval(<?php echo $receive['id'];?>);"> Class <?php echo $receive['class'];?></span></a>
+									   <!--</a>-->
+									</li>
+								<?php
+								}else{
+								?>
+									<li class="list active">
+									  <!-- <a href="ebook.php?class=<?php echo $receive['class'];?>">-->
+									   <img src="images/arrow.png" style="float: none; margin-right: 5px;" />
+									  <a href="javascript:void(0)"><span class="sp" style="color: #666;" onclick="return getebkval(<?php echo $receive['id'];?>);"> Class <?php echo $receive['class'];?></span></a>
+									   <!--</a>-->
+									</li>
+								<?php
+								}
+							}
+							?>
+						</ul>
 					<?php
 					}
 					?>
                 </div>
                 <div id="container_right">
-                    
-                    
-                    <div class="topiccontent" id="t1">
-		      <div class="welcome">
-              			Welcome <?php if($_SESSION['name']){echo $_SESSION['name'];} ?>
-                </div>
-		    <h5 style="color: blue;">This section contains the Ebook and Revision notes. Revision notes are very  helpful in quick preparation for exam</h5>
+					<div class="topiccontent" id="t1">
+						<div class="welcome">
+							Welcome <?php if($_SESSION['name']){echo $_SESSION['name'];} ?>
+						</div>
+						<h5 style="color: blue;">
+							This section contains the Ebook and Revision notes. Revision notes are very  helpful in quick preparation for exam.
+						</h5>
 					<?php
-					if(isset($_GET['clid']))
-					{
-					$sqlcl=mysql_query("select * from `student_class` where `id`='$idd'");
-					$rescl=mysql_fetch_array($sqlcl);
+					if(isset($_GET['clid'])){
+						$sqlcl=mysql_query("select * from `student_class` where `id`='$idd'");
+						$rescl=mysql_fetch_array($sqlcl);
 					?>
-					 <h5>Ebooks For Free Download  <span style="margin: 10px;">CLASS</span><span style="color: red;"><?php echo $rescl['class'];?></span></h5>
-					    <?php
-                         $fet=mysql_query("select * from `student_subject` where `class_id`='$idd'");
-                         $nu=mysql_num_rows($fet);
-                         if($nu!=0){
-                         while($res=mysql_fetch_array($fet))
-                         {
-                         ?>
-                            <h2 style="background-color:#efefef;"><img src="../admin/<?php echo $res['image'];?>" style="float: left; margin-right: 5px; width:40px; margin-top: -10px;"/>
-							<?php echo $res['subject'];?>
-							</h2>
-                            <h4></h4>
-                             <ul>
-                              <?php
-                              $subjid=$res['id'];
-                              $fet3=mysql_query("select * from `student_topic` where `class_id`='$idd' and `subject_id`='$subjid'");
-                              while($re=mysql_fetch_array($fet3))
-                              {
-                                $tidd=$re['id'];
-                              $fet4=mysql_query("select * from `extra_detail` where `class_id`='$idd' and `subject_id`='$subjid' and `topic_id`='$tidd'");
-							  $nos=mysql_num_rows($fet4);
-							  if($nos>0){
-                              while($ree=mysql_fetch_array($fet4))
-                              {
-                              ?>
-                                <li class="list1">
-                                    <a href="pdf_server.php?file=../admin/<?php echo $ree['ebook'];?>"><span style="float: left;"><a class="li1" href="notes2.php?cncptid=../admin/<?php echo $res3['ebook'];?>"><?php echo $re['topic'];?></a></span><?php if (!$_SESSION['name']){ ?><img src="images/download.png" style="height: 30px;float: right; margin-left: 25px;" onclick="return getpop();"/><?php }else{?>
-                                    <img src="images/download.png" style="height: 30px;float: right; margin-left: 25px;" /></a><?php } ?>
-                                </li>
-								<?php
-								} 
-								}
-								else
-								{
-								//echo "<span style='font-family:arial; font-size:14px;'>There is no record.</span>";
-								}
-								}
-								?>
-                            </ul>
-							<?php 
-							}
-							}
-							else
-							{ 
-							?>
-							 <!--<h5>Ebooks For Free Download  <span style="margin: 10px;">CLASS</span><span style="color: red;">x</span></h5>-->
-							  <?php
-                         $fet1=mysql_query("select * from `student_subject` where `class_id`='7'");
-                         while($res1=mysql_fetch_array($fet1))
-                         {
-                         ?>
-                           <div style="background-color:#efefef;"> <img src="notes2.php?cncptid=../admin/<?php echo $res1['image'];?>" style="float: left; margin-right: 10px; width:40px; margin-top: -10px;"/>
-							<h2><?php echo $res1['subject'];?>
-							</h2></div>
-						  
-                             <ul>
-                              <?php
-                              $subid=$res1['id'];
-                              //echo "select * from `student_topic` where `class_id`='$class' and `subject_id`='$subid'";
-                              $fet2=mysql_query("select * from `student_topic` where `class_id`='9' and `subject_id`='$subid'");
-                              while($res2=mysql_fetch_array($fet2))
-                              {
-                                $tid=$res2['id'];
-                              //echo "select * from `student_topic` where `class_id`='$class' and `subject_id`='$subid'";
-                              $fet3=mysql_query("select * from `extra_detail` where `class_id`='9' and `subject_id`='$subid' and `topic_id`='$tid'");
-                              while($res3=mysql_fetch_array($fet3))
-                              {
-                              ?>
-                                <li class="list1">
-                                    <span style="float: left;"><a class="li1" href="notes2.php?cncptid=../admin/<?php echo $res3['ebook'];?>"><?php echo $res2['topic'];?></a></span><?php if (!$_SESSION['name']){ ?><img src="images/download.png" style="height: 30px;float: right; margin-left: 25px;" /><?php }else{?>
-                                    <a href="pdf_server.php?file=../admin/<?php echo $res3['ebook'];?>"><img src="images/download.png" style="height: 30px;float: right; margin-left: 25px;" /></a><?php } ?>
-                                </li><?php } }?>
-                            </ul>
+						<h5>Ebooks For Free Download  <span style="margin: 10px;">CLASS</span><span style="color: red;"><?php echo $rescl['class'];?></span></h5>
 							<?php
-							}
+							 $fet=mysql_query("select * from `student_subject` where `class_id`='$idd'");
+							 $nu=mysql_num_rows($fet);
+							 if($nu!=0){
+								while($res=mysql_fetch_array($fet)){
+                         ?>
+								<h2 style="background-color:#efefef;">
+									<img src="../admin/<?php echo $res['image'];?>" style="float: left; margin-right: 5px; width:40px; margin-top: -10px;"/>
+									<?php echo $res['subject'];?>
+								</h2>
+								<h4></h4>
+								<ul>
+									<?php
+										$subjid=$res['id'];
+										$fet3=mysql_query("select * from `student_topic` where `class_id`='$idd' and `subject_id`='$subjid'");
+										
+										while($re=mysql_fetch_array($fet3)){
+											$tidd=$re['id'];
+											$fet4=mysql_query("select * from `extra_detail` where `class_id`='$idd' and `subject_id`='$subjid' and `topic_id`='$tidd' AND ebook!=''");
+											
+											$nos=mysql_num_rows($fet4);
+												if($nos>0){
+													while($ree=mysql_fetch_array($fet4)){
+									?>
+													<li class="list1">
+														<a href="pdf_server.php?file=../admin/<?php echo $ree['ebook'];?>"><span style="float: left;"><a class="li1" href="notes2.php?cncptid=../admin/<?php echo $res3['ebook'];?>"><?php echo $re['topic'];?></a></span><?php if (!$_SESSION['name']){ ?><img src="images/download.png" style="height: 30px;float: right; margin-left: 25px;" onclick="return getpop();"/><?php }else{?>
+														<img src="images/download.png" style="height: 30px;float: right; margin-left: 25px;" /></a><?php } ?>
+													</li>
+												<?php
+													} 
+												}else{
+												//echo "<span style='font-family:arial; font-size:14px;'>There is no record.</span>";
+												}
+										}
+									?>
+								</ul>
+								<?php 
+								}
+							}else{ 
+								?>
+								 <!--<h5>Ebooks For Free Download  <span style="margin: 10px;">CLASS</span><span style="color: red;">x</span></h5>-->
+								<?php
+								$fet1=mysql_query("select * from `student_subject` where `class_id`='7'");
+								while($res1=mysql_fetch_array($fet1)){
+									?>
+									<div style="background-color:#efefef;">
+										<img src="notes2.php?cncptid=../admin/<?php echo $res1['image'];?>" style="float: left; margin-right: 10px; width:40px; margin-top: -10px;"/>
+										<h2>
+											<?php echo $res1['subject'];?>
+										</h2>
+									</div>
+									<ul>
+									  <?php
+									  $subid=$res1['id'];
+									  //echo "select * from `student_topic` where `class_id`='$class' and `subject_id`='$subid'";
+									  $fet2=mysql_query("select * from `student_topic` where `class_id`='9' and `subject_id`='$subid'");
+									  while($res2=mysql_fetch_array($fet2)){
+										$tid=$res2['id'];
+									  //echo "select * from `student_topic` where `class_id`='$class' and `subject_id`='$subid'";
+									  $fet3=mysql_query("select * from `extra_detail` where `class_id`='9' and `subject_id`='$subid' and `topic_id`='$tid'");
+									  while($res3=mysql_fetch_array($fet3)){
+									  ?>
+										<li class="list1">
+											<span style="float: left;"><a class="li1" href="notes2.php?cncptid=../admin/<?php echo $res3['ebook'];?>"><?php echo $res2['topic'];?></a></span><?php if (!$_SESSION['name']){ ?><img src="images/download.png" style="height: 30px;float: right; margin-left: 25px;" /><?php }else{?>
+											<a href="pdf_server.php?file=../admin/<?php echo $res3['ebook'];?>"><img src="images/download.png" style="height: 30px;float: right; margin-left: 25px;" /></a><?php } ?>
+										</li><?php } }?>
+									</ul>
+								<?php
+								}
 							}
 							?>
-					
-					
 					<?php
-					}
-					else{
+					}else{
 					?>
-					   
-                       <!--<h5>Ebooks For Free Download  <span style="margin: 10px;">CLASS</span><span style="color: red;"><?php echo x;?></span></h5>-->
-						
-                          <?php
-                         $fet1=mysql_query("select * from `student_subject` where `class_id`='$class'");
-                         $num=mysql_num_rows($fet1);
-                         if($num!=0){
-                         while($res1=mysql_fetch_array($fet1))
-                         {
+					   <!--<h5>Ebooks For Free Download  <span style="margin: 10px;">CLASS</span><span style="color: red;"><?php echo x;?></span></h5>-->
+						  <?php
+                        $fet1=mysql_query("select * from `student_subject` where `class_id`='$class'");
+                        $num=mysql_num_rows($fet1);
+                        if($num!=0){
+							while($res1=mysql_fetch_array($fet1)){
                          ?>
-                           <div style="background-color:#efefef;padding:3px;"> <img src="../admin/<?php echo $res1['image'];?>" style="float: left; margin-right: 10px; width:40px; margin-top: 10px;"/>
-							<h2><?php echo $res1['subject'];?>
-							</h2></div>
-                            
-                             <ul>
-                              <?php
-                              $subid=$res1['id'];
-                              $fet2=mysql_query("select * from `student_topic` where `class_id`='$class' and `subject_id`='$subid'");
-                              while($res2=mysql_fetch_array($fet2))
-                              {
-                                $tid=$res2['id'];
-                              $fet3=mysql_query("select * from `extra_detail` where `class_id`='$class' and `subject_id`='$subid' and `topic_id`='$tid'");
-							  $no=mysql_num_rows($fet3);
-							  if($no>0){
-                              while($res3=mysql_fetch_array($fet3))
-                              {
+						<div style="background-color:#efefef;padding:3px;">
+							<img src="../admin/<?php echo $res1['image'];?>" style="float: left; margin-right: 10px; width:40px; margin-top: 10px;"/>
+							<h2>
+								<?php echo $res1['subject'];?>
+							</h2>
+						</div>
+						<ul>
+							 <?php
+							$subid=$res1['id'];
+							$fet2=mysql_query("select * from `student_topic` where `class_id`='$class' and `subject_id`='$subid'");
+								while($res2=mysql_fetch_array($fet2)){
+									$tid=$res2['id'];
+									$fet3=mysql_query("select * from `extra_detail` where `class_id`='$class' and `subject_id`='$subid' and `topic_id`='$tid'");
+									$no=mysql_num_rows($fet3);
+										if($no>0){
+											while($res3=mysql_fetch_array($fet3)){
                               ?>
-                                <li class="list1">
-                                    <span style="float: left;"><a class="li1" href="notes2.php?cncptid=../admin/<?php echo $res3['ebook'];?>"><?php echo $res2['topic'];?></a></span><?php if (!$_SESSION['name']){ ?><img src="images/download.png" style="height: 30px;float: right; margin-left: 25px;" /><?php }else{?>
-                                    <a href="pdf_server.php?file=../admin/<?php echo $res3['ebook'];?>"><img src="images/download.png" style="height: 30px;float: right; margin-left: 25px;" /></a><?php } ?>
-                                </li>
-								<?php
-								} 
-								}
-								else
-								{
-								//echo "<span style='font-family:arial; font-size:14px;'>There is no record.</span>";
-								}
+												<li class="list1">
+													<span style="float: left;"><a class="li1" href="notes2.php?cncptid=../admin/<?php echo $res3['ebook'];?>"><?php echo $res2['topic'];?></a></span><?php if (!$_SESSION['name']){ ?><img src="images/download.png" style="height: 30px;float: right; margin-left: 25px;" /><?php }else{?>
+													<a href="pdf_server.php?file=../admin/<?php echo $res3['ebook'];?>"><img src="images/download.png" style="height: 30px;float: right; margin-left: 25px;" /></a><?php } ?>
+												</li>
+										<?php
+											} 
+										}else{
+											//echo "<span style='font-family:arial; font-size:14px;'>There is no record.</span>";
+										}
 								}
 								?>
-                            </ul>
+						</ul>
 							<?php 
 							}
 							}
