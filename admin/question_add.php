@@ -72,7 +72,13 @@ margin-bottom:5px;
  <div id="main_bar">
  		<div id="main_box">
 				<div id="left_box">
-						<?php include_once("conleft_bar.php"); ?>
+					<?php
+						if($_SESSION['admin_type'] == 1){
+							include_once("conleft_bar_sub.php");
+						}else{
+							include_once("conleft_bar.php");
+						}
+					?>
 				</div>
 				
                 

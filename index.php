@@ -1,8 +1,7 @@
 <?php
 include_once("function.php");
-if(isset($_GET['err']))
-{
-$mess=$_GET['err'];
+if(isset($_GET['err'])){
+	$mess=$_GET['err'];
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -23,11 +22,8 @@ $mess=$_GET['err'];
 <link rel="stylesheet" href="css/reveal.css">
 <!-----pop up ned------>	
     <!-- jQuery -->
-	<script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
-	
-  
+<script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
     <!-- FlexSlider -->
-    
    <link rel="stylesheet" type="text/css" href="css/styles.css">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" charset="utf-8" src="js/jquery.easing-1.3.js"></script>
