@@ -16,12 +16,8 @@ $res=mysql_query("select * from `student_class`");
     <script src="js/tiny-mce/jquery.tinymce.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-	
             setupTinyMCE();
-	
         });
-		
-
     </script>
     <!-- /TinyMCE -->
 <script>
