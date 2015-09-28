@@ -85,6 +85,9 @@
 											<a href="weakConcept.php"><i class="icon-chevron-right"><img src="image/1.png" /></i>Weak Concept</a>
 										</li>
 										<li>
+											<a href="addSubAdmin.php"><i class="icon-chevron-right"><img src="image/1.png" /></i>Add Sub Admin</a>
+										</li>
+										<li>
 											<a href="adminlogout.php"><i class="icon-chevron-right"><img src="image/1.png" /></i>Logout</a>
 										</li>
 
