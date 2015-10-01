@@ -9,7 +9,7 @@ while($getressubject=mysql_fetch_array($getsubject))
 						{
 ?>
 <h2>
-							<img src="../admin/<?php echo $getressubject['image'];?>" style="float: left; margin-right: 10px; width:40px; margin-top: -10px;"/>
+							<img src="../admin/<?php echo $getressubject['image'];?>" style="float: left; margin:0 15px; width:40px;"/>
 							<!--Mathematics-->
 							<?php echo $getressubject['subject'];?>
 </h2>
@@ -42,7 +42,7 @@ while($getressubject=mysql_fetch_array($getsubject))
 								 <embed src="../admin/<?php echo $resvideo['video'];?>" type="application/x-shockwave-flash" width="230" height="200" allowscriptaccess="always" allowfullscreen="true"></embed>
 								 </object>-->
 				  <a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade">
-                                                                         <img src="images/play.jpg" onclick="play('<?php echo $resvideo['id'];?>')"></a>
+                                                                         <img src="images/play.jpg" onclick="play('<?php echo $resvideo['id'];?>')" style="width:100%; float:left;"></a>
                            
                             </div>
 					<?php
@@ -57,7 +57,7 @@ while($getressubject=mysql_fetch_array($getsubject))
 								 <embed src="../admin/<?php echo $resvideo['video'];?>" type="application/x-shockwave-flash" width="230" height="200" allowscriptaccess="always" allowfullscreen="true"></embed>
 								 </object>-->
 				  <a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade">
-                                                                         <img src="images/play.jpg" onclick="play('<?php echo $resvideo['id'];?>')"></a>
+                                                                         <img src="images/play.jpg" onclick="play('<?php echo $resvideo['id'];?>')" style="width:100%; float:left;"></a>
                            
                     </div>
 					<?php
@@ -72,7 +72,7 @@ while($getressubject=mysql_fetch_array($getsubject))
 								 <embed src="../admin/<?php echo $resvideo['video'];?>" type="application/x-shockwave-flash" width="230" height="200" allowscriptaccess="always" allowfullscreen="true"></embed>
 								 </object>-->
 				  <a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade">
-                                                                         <img src="images/play.jpg" onclick="play('<?php echo $resvideo['id'];?>')"></a>
+                                                                         <img src="images/play.jpg" onclick="play('<?php echo $resvideo['id'];?>')" style="width:100%; float:left;"></a>
                            
                     </div>
 					<?php
@@ -82,7 +82,7 @@ while($getressubject=mysql_fetch_array($getsubject))
 					else
 					{
 					?>
-					<h4 style="color: red;">Video Comming Soon</h4>
+					<h4 style="color: red; font-size: 14px;">Video Comming Soon</h4>
 					<?php
 					}
 					?>

@@ -13,7 +13,7 @@ $ressubname=mysql_fetch_array($sqlsubname);
 	<div id="container_content">
 		<div id="page" style="box-shadow:none; background:none;">
 			<div id="container_right">
-				<h2><img src="../admin/<?php echo $ressubname['image'];?>" style="float: left; margin-right: 10px; width:40px; margin-top: -10px;"/>
+				<h2><img src="../admin/<?php echo $ressubname['image'];?>" style="float: left; margin-right: 10px; width:40px; margin-top:0;"/>
 					<!--Mathematics------------>
 					<span class="topic">
 						<!--Algebra-->
@@ -80,8 +80,8 @@ $ressubname=mysql_fetch_array($sqlsubname);
 										<!--<embed src="http://www.youtube-nocookie.com/v/-xYYnj-SrsM?hl=en_US&amp;version=3" type="application/x-shockwave-flash" width="230" height="200" allowscriptaccess="always" allowfullscreen="true"></embed>-->
 										<!--<embed src="../admin/<?php echo $resvideo['video'];?>" type="application/x-shockwave-flash" width="230" height="200" allowscriptaccess="always" allowfullscreen="true"></embed>
 										</object>-->
-										<a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade">
-											 <img src="images/play.jpg" onclick="play('<?php echo $resvideo['id'];?>')">
+										<a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade" style="padding:0;">
+											 <img src="images/play.jpg" onclick="play('<?php echo $resvideo['id'];?>')" style="width:100%; float:left; padding:0;">
 										 </a>
 									</div>
 						<?php
@@ -96,8 +96,8 @@ $ressubname=mysql_fetch_array($sqlsubname);
 									   
 										<embed src="../admin/<?php echo $resvideo['video'];?>" type="application/x-shockwave-flash" width="230" height="200" allowscriptaccess="always" allowfullscreen="true"></embed>
 									   </object>-->
-									   <a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade">
-										<img src="images/play.jpg" onclick="play('<?php echo $resvideo['id'];?>')"></a>
+									   <a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade" style="padding:0;">
+										<img src="images/play.jpg" onclick="play('<?php echo $resvideo['id'];?>')" style="width:100%; float:left; padding:0;"></a>
 									</div>
 						<?php
 								}
@@ -111,8 +111,8 @@ $ressubname=mysql_fetch_array($sqlsubname);
 									   
 									   <embed src="../admin/<?php echo $resvideo['video'];?>" type="application/x-shockwave-flash" width="230" height="200" allowscriptaccess="always" allowfullscreen="true"></embed>
 									   </object>-->
-										<a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade">
-										<img src="images/play.jpg" onclick="play('<?php echo $resvideo['id'];?>')"></a>
+										<a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade" style="padding:0;">
+										<img src="images/play.jpg" onclick="play('<?php echo $resvideo['id'];?>')" style="width:100%; float:left; padding:0;"></a>
 									</div>
 								<?php
 								}
