@@ -93,7 +93,13 @@ $fetch=mysql_query("select * from `student_question` where `class_id`='$class' a
  <div id="main_bar">
  		<div id="main_box">
 				<div id="left_box">
-						<?php include_once("conleft_bar.php"); ?>
+					<?php
+						if($_SESSION['admin_type'] == 1){
+							include_once("conleft_bar_sub.php");
+						}else{
+							include_once("conleft_bar.php");
+						}
+					?>
 				</div>
 				<div id="right_box" style="margin-left:40px;">
 						<div class="headline" style="width:150% !important;">

@@ -36,10 +36,6 @@ include_once('function.php');
 	        box-shadow: 0 10px 6px -6px black; border-radius:10px;">
 			<!--<h1 style="text-align: center; color: #fff; font-size:46px; font-weight:normal; font-family: 'dobkin_scriptregular';">Login Here</h1>-->
 			<h1 style="text-align: center; color: #fff; font-size:46px; font-weight:normal; font-family: 'arieal';">Login Here</h1>
-          
-			
-			
-			
 			<section class="main" style="margin-top: 0px;">
 				<form name="f" class="form-1"  method="post" action="login_action.php">
 					<p class="field">

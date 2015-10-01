@@ -13,6 +13,7 @@ $res=mysql_query("select * from `student_class`");
  <!-- Load TinyMCE-->
 <script src="js/jquery-1.6.4.min.js" type="text/javascript"></script>
 <script src="js/setup.js" type="text/javascript"></script>
+<<<<<<< HEAD
 <script src="js/tiny-mce/jquery.tinymce.js" type="text/javascript"></script>
 <script type="text/javascript">
 	$(document).ready(function () {
@@ -28,6 +29,30 @@ $res=mysql_query("select * from `student_class`");
 			$("#tp").html(result);
 		}});  
 	}
+=======
+    <script src="js/tiny-mce/jquery.tinymce.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            setupTinyMCE();
+        });
+    </script>
+    <!-- /TinyMCE -->
+<script>
+ function getval(id)
+            {
+              $.ajax({url:"subject1.php?val="+id,success:function(result){
+                $("#t1").html(result);
+                }});  
+            }
+</script>
+<script>
+ function get_topic(vals)
+            {
+              $.ajax({url:"topic.php?val="+vals,success:function(result){
+                $("#tp").html(result);
+                }});  
+            }
+>>>>>>> b82c6f76c9069e7030a89612c350798b2992773a
 </script>
 <style>
 .btm{
@@ -56,6 +81,7 @@ i++;
 </div>
  <!--------------top bar end-------->
  <!--------------content bar-------->
+<<<<<<< HEAD
 <div id="main_bar">
 	<div id="main_box">
 		<div id="left_box">
@@ -69,6 +95,18 @@ i++;
 			<div id="content1">
 				<div class="head2">
 					Add Question
+=======
+ <div id="main_bar">
+ 		<div id="main_box">
+				<div id="left_box">
+					<?php
+						if($_SESSION['admin_type'] == 1){
+							include_once("conleft_bar_sub.php");
+						}else{
+							include_once("conleft_bar.php");
+						}
+					?>
+>>>>>>> b82c6f76c9069e7030a89612c350798b2992773a
 				</div>
 				<div id="content2">
 					<?php

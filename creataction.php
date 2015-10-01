@@ -37,7 +37,7 @@ if(isset($_POST['button']))
 		$message="Thank you for register in quiz\n"."your password is= ".$pass;
 	       $subject="email verification";
 	       $from="noreply@learnscience.co.in";
-                mail($email,$subject,$message,"From: $from\n");
+			mail($email,$subject,$message,"From: $from\n");
     }
     else{
 	 $err="An account already exists with the same email address. Login or create an account with another email address.";
