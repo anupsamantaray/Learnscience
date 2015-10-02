@@ -116,7 +116,7 @@ function play(video)
                     <div class="topiccontent">
                        
                          <h5>Videos</h5>
-                            <div  id="t1">
+                            <div  id="t1" class="newattech">
 							<?php
 					if(isset($_GET['clid']))
 					{
@@ -315,7 +315,7 @@ function play(video)
 					}
 					}
 					?>
-                            </div>	 
+                    </div>	 
                     </div>
                 </div>
             </div>

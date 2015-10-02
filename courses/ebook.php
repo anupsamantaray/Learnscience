@@ -188,7 +188,7 @@ alert("please login to download");
 									  while($res3=mysql_fetch_array($fet3)){
 									  ?>
 										<li class="list1">
-											<span style="float: left;"><a class="li1" href="notes2.php?cncptid=../admin/<?php echo $res3['ebook'];?>"><?php echo $res2['topic'];?></a></span><?php if (!$_SESSION['name']){ ?><img src="images/download.png" style="height: 30px;float: right; margin-left: 25px;" /><?php }else{?>
+											<span style=""><a class="li1" href="notes2.php?cncptid=../admin/<?php echo $res3['ebook'];?>"><?php echo $res2['topic'];?></a></span><?php if (!$_SESSION['name']){ ?><img src="images/download.png" style="height: 30px;float: right; margin-left: 25px;" /><?php }else{?>
 											<a href="pdf_server.php?file=../admin/<?php echo $res3['ebook'];?>"><img src="images/download.png" style="height: 30px;float: right; margin-left: 25px;" /></a><?php } ?>
 										</li><?php } }?>
 									</ul>
@@ -224,7 +224,7 @@ alert("please login to download");
 											while($res3=mysql_fetch_array($fet3)){
                               ?>
 												<li class="list1">
-													<span style="float: left;"><a class="li1" href="notes2.php?cncptid=../admin/<?php echo $res3['ebook'];?>"><?php echo $res2['topic'];?></a></span><?php if (!$_SESSION['name']){ ?><img src="images/download.png" style="height: 30px;float: right; margin-left: 25px;" /><?php }else{?>
+													<span style=""><a class="li1" href="notes2.php?cncptid=../admin/<?php echo $res3['ebook'];?>"><?php echo $res2['topic'];?></a></span><?php if (!$_SESSION['name']){ ?><img src="images/download.png" style="height: 30px;float: right; margin-left: 25px;" /><?php }else{?>
 													<a href="pdf_server.php?file=../admin/<?php echo $res3['ebook'];?>"><img src="images/download.png" style="height: 30px;float: right; margin-left: 25px;" /></a><?php } ?>
 												</li>
 										<?php
@@ -265,7 +265,7 @@ alert("please login to download");
                               {
                               ?>
                                 <li class="list1">
-                                    <span style="float:left;"><a class="li1" href="notes2.php?cncptid=../admin/<?php echo $res3['ebook'];?>"><?php echo $res2['topic'];?></a></span><?php if (!$_SESSION['name']){ ?><img src="images/download.png" style="height: 30px;float: right; margin-left: 25px;" /><?php }else{?>
+                                    <span style=""><a class="li1" href="notes2.php?cncptid=../admin/<?php echo $res3['ebook'];?>"><?php echo $res2['topic'];?></a></span><?php if (!$_SESSION['name']){ ?><img src="images/download.png" style="height: 30px;float: right; margin-left: 25px;" /><?php }else{?>
                                     <a href="pdf_server.php?file=../admin/<?php echo $res3['ebook'];?>"><img src="images/download.png" style="height: 30px;float:right; margin-left: 25px;" /></a><?php } ?>
                                 </li><?php } }?>
                             </ul>
