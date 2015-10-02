@@ -131,6 +131,7 @@ h4{
 	cursor : pointer;
 	margin:0;
 	display: block;
+	clear: both;
    /* margin-bottom: 15px;*/
 }
 
@@ -157,14 +158,14 @@ td{
     float: left;
     min-height: 250px;
     padding: 1%;
-    border:1px solid #dedede;
+    /*border:1px solid #dedede;*/
 }
 .videobox{
     width:120px;
     height: 90px;
     float: left;
-    border:1px solid #dedede;
-    margin:15px 0px;
+    /*border:1px solid #dedede;*/
+    margin: 0 0 15px 15px;
 	clear:both;
 }
 .list{

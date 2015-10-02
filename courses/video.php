@@ -138,7 +138,7 @@ function play(video)
 					while($getrestopp=mysql_fetch_array($gettopp))
 						{
 					?>	
-					<h4 style="float:left;">
+					<h4 style="">
 							<?php echo $getrestopp['topic'];?>
 					</h4>
 					<?php
@@ -147,7 +147,7 @@ function play(video)
 					$numvd=mysql_num_rows($getvidd);
 					if($numvd>0){
 					?>
-					<div style="width:100%; height:auto; float:left;">
+					<div style="width:100%; height:auto;">
 					<?php
 					while($resvidd=mysql_fetch_array($getvidd)){
 					$i++;
@@ -155,9 +155,9 @@ function play(video)
 							{
 					?>
 					
-					      <div class="videobox" style="margin-left:0px;">
+					      <div class="videobox" style="">
                                                                          <a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade" style="padding:0;">
-                                                                         <img src="images/play.jpg" onclick="play('<?php echo $resvidd['id'];?>')" style="width:100%; float:left; padding:0;"></a>
+                                                                         <img src="images/play.jpg" onclick="play('<?php echo $resvidd['id'];?>')" style="width:100%; padding:0;"></a>
 							   
 						</div>
 					<?php
@@ -165,9 +165,9 @@ function play(video)
 					elseif($i%4==0)
 					{
 					?>
-					<div class="videobox" style="margin-left:0px;">
+					<div class="videobox" style="">
                                                                          <a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade" style="padding:0;">
-                                                                         <img src="images/play.jpg" onclick="play('<?php echo $resvidd['id'];?>')" style="width:100%; float:left; padding:0;"></a>
+                                                                         <img src="images/play.jpg" onclick="play('<?php echo $resvidd['id'];?>')" style="width:100%; padding:0;"></a>
 							   
 					</div>
 					<?php
@@ -177,7 +177,7 @@ function play(video)
 					?>
 					<div class="videobox">
                                                                          <a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade" style="padding:0;">
-                                                                         <img src="images/play.jpg" onclick="play('<?php echo $resvidd['id'];?>')" style="width:100%; float:left; padding:0;"></a>
+                                                                         <img src="images/play.jpg" onclick="play('<?php echo $resvidd['id'];?>')" style="width:100%; padding:0;"></a>
 							   
 					</div>
 					<?php
@@ -190,7 +190,7 @@ function play(video)
 					else
 					{
 					?>
-					<h4 style="float:left; color: red;">Video coming soon...</h4>
+					<h4 style="color: red;">Video coming soon...</h4>
 					<?php
 					}
 					?>
@@ -202,7 +202,7 @@ function play(video)
 					else
 					{
 					?>
-					<h4 style="float:left; color: red;">Video coming soon...</h4>
+					<h4 style="color: red;">Video coming soon...</h4>
 					<?php
 					}
 					}
@@ -229,7 +229,7 @@ function play(video)
 					while($getrestop=mysql_fetch_array($gettop))
 						{
 					?>	
-					<h4 style="float:left;">
+					<h4 style="">
 							<?php echo $getrestop['topic'];?>
 							<!--Algebra-->
 					</h4>
@@ -240,21 +240,21 @@ function play(video)
 					$numvdo=mysql_num_rows($getvid);
 					if($numvdo>0){
 					?>
-					<div style="width:100%; height:auto; float:left;">
+					<div style="width:100%; height:auto;">
 					<?php
 					while($resvid=mysql_fetch_array($getvid)){
 					$i++;
 					if($i==1)
 							{
 					?>
-						<div class="videobox" style="margin-left:0px;">
+						<div class="videobox" style="">
 									 <!--<object width="230" height="200">
 									 <param name="movie" value="../admin/<?php echo $resvid['video'];?>"></param>
 									 <param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param>
 									 <embed src="../admin/<?php echo $resvid['video'];?>" type="application/x-shockwave-flash" width="230" height="200" allowscriptaccess="always" allowfullscreen="true"></embed>
 									 </object>-->
                                                                          <a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade" style="padding:0;">
-                                                                         <img src="images/play.jpg" onclick="play('<?php echo $resvid['id'];?>')" style="width:100%; float:left; padding:0;"></a>
+                                                                         <img src="images/play.jpg" onclick="play('<?php echo $resvid['id'];?>')" style="width:100%; padding:0;"></a>
 							   
 						</div>
 					<?php
@@ -262,14 +262,14 @@ function play(video)
 					elseif($i%4==0)
 					{
 					?>
-					<div class="videobox" style="margin-left:0px;">
+					<div class="videobox" style="">
 									  <!--<object width="230" height="200">
 									 <param name="movie" value="../admin/<?php echo $resvid['video'];?>"></param>
 									 <param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param>
 									 <embed src="../admin/<?php echo $resvid['video'];?>" type="application/x-shockwave-flash" width="230" height="200" allowscriptaccess="always" allowfullscreen="true"></embed>
 									 </object>-->
                                                                          <a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade" style="padding:0;">
-                                                                         <img src="images/play.jpg" onclick="play('<?php echo $resvid['id'];?>')" style="width:100%; float:left; padding:0;"></a>
+                                                                         <img src="images/play.jpg" onclick="play('<?php echo $resvid['id'];?>')" style="width:100%; padding:0;"></a>
 							   
 					</div>
 					<?php
@@ -284,7 +284,7 @@ function play(video)
 									 <embed src="../admin/<?php echo $resvid['video'];?>" type="application/x-shockwave-flash" width="230" height="200" allowscriptaccess="always" allowfullscreen="true"></embed>
 									 </object>-->
                                                                          <a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade" style="padding:0;">
-                                                                         <img src="images/play.jpg" onclick="play('<?php echo $resvid['id'];?>')" style="width:100%; float:left; padding:0;"></a>
+                                                                         <img src="images/play.jpg" onclick="play('<?php echo $resvid['id'];?>')" style="width:100%; padding:0;"></a>
 							   
 					</div>
 					<?php
@@ -297,7 +297,7 @@ function play(video)
 					else
 					{
 					?>
-					<h4 style="float:left; color: red;">Video coming soon...</h4>
+					<h4 style="color: red;">Video coming soon...</h4>
 					<?php
 					}
 					?>
@@ -309,7 +309,7 @@ function play(video)
 					else
 					{
 					?>
-					<h4 style="float:left; color: red;">Video coming soon...</h4>
+					<h4 style="color: red;">Video coming soon...</h4>
 					<?php
 					}
 					}
