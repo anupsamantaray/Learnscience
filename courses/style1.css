@@ -112,9 +112,9 @@ h2{
     font-family:arial;
     font-size:24px;
     font-weight: 300;
-    color: #333;
+    color: #fff;
     margin: 0;
-	padding:15px 0;
+	padding:12px 0;
 	display: block;
 	clear: both;
 	/*background-color:#efefef;*/
@@ -160,10 +160,10 @@ td{
     border:1px solid #dedede;
 }
 .videobox{
-    width:120px;
-    height: 90px;
+    width:80px;
+    height:50px;
     float: left;
-    border:1px solid #dedede;
+    /*border:1px solid #dedede;*/
     margin:15px 0px;
 	clear:both;
 }
@@ -219,8 +219,9 @@ text-decoration:none;
     border-left: 1px solid #dedede;
 }
 #container_right h2{
-	background:#f2f2f2;
+	background:#FFAB5B;
 	clear: both;
+	color:#fff;
 }
 #footer{
     width:100%;

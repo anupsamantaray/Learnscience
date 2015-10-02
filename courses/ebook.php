@@ -206,7 +206,7 @@ alert("please login to download");
                         if($num!=0){
 							while($res1=mysql_fetch_array($fet1)){
                          ?>
-						<div style="background-color:#efefef;padding:3px;">
+						<div style="">
 							<img src="../admin/<?php echo $res1['image'];?>" style="float: left; margin-right: 10px; width:40px; margin-top: 10px;"/>
 							<h2>
 								<?php echo $res1['subject'];?>
