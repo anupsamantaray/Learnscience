@@ -70,7 +70,7 @@ function play(video)
 						  
 					?>
 						<li class="list active">
-                           <img src="images/arrow.png" style="float: left; margin-right: 5px;" />
+                           <img src="images/arrow.png" style="margin-right: 5px;" />
 						  <a href="#"><span class="sp" style="color: #0070B0;" onclick="return getval(<?php echo $idd;?>);"> Class <?php echo $rescla['class'];?></span></a>
                         </li>
 					</ul>
@@ -87,7 +87,7 @@ function play(video)
 						   if($resclass['class']=='x'){
 					?>
                         <li class="list active">
-                           <img src="images/arrow.png" style="float: left; margin-right: 5px;" /> 
+                           <img src="images/arrow.png" style="margin-right: 5px;" /> 
 						   <a href="#"><span class="sp" style="color: #0070B0;" onclick="return getvals(<?php echo $resclass['id'];?>);"> Class <?php echo $resclass['class'];?></span></a>
                         </li>
 					<?php
@@ -95,7 +95,7 @@ function play(video)
 						   else{
 					?>	
                          <li class="list">
-                            <img src="images/arrow.png" style="float: left; margin-right: 5px;" /> 
+                            <img src="images/arrow.png" style="margin-right: 5px;" /> 
 							<a href="#"><span class="sp" style="color:#666;" onclick="return getvals(<?php echo $resclass['id'];?>);">Class <?php echo $resclass['class'];?></span></a>
                         </li>
 					<?php
