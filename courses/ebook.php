@@ -150,7 +150,7 @@ alert("please login to download");
 													while($ree=mysql_fetch_array($fet4)){
 									?>
 													<li class="list1">
-														<a href="pdf_server.php?file=../admin/<?php echo $ree['ebook'];?>"><span style="float: left;"><a class="li1" href="notes2.php?cncptid=../admin/<?php echo $res3['ebook'];?>"><?php echo $re['topic'];?></a></span><?php if (!$_SESSION['name']){ ?><img src="images/download.png" style="height: 30px;float: right; margin-left: 25px;" onclick="return getpop();"/><?php }else{?>
+														<a href="pdf_server.php?file=../admin/<?php echo $ree['ebook'];?>"><span style="display: initial;"><a class="li1" href="notes2.php?cncptid=../admin/<?php echo $res3['ebook'];?>"><?php echo $re['topic'];?></a></span><?php if (!$_SESSION['name']){ ?><img src="images/download.png" style="height: 30px;float: right; margin-left: 25px;" onclick="return getpop();"/><?php }else{?>
 														<img src="images/download.png" style="height: 30px;float: right; margin-left: 25px;" /></a><?php } ?>
 													</li>
 												<?php

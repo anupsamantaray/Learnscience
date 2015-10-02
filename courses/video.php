@@ -156,8 +156,8 @@ function play(video)
 					?>
 					
 					      <div class="videobox" style="margin-left:0px;">
-                                                                         <a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade">
-                                                                         <img src="images/play.jpg" onclick="play('<?php echo $resvidd['id'];?>')"></a>
+                                                                         <a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade" style="padding:0;">
+                                                                         <img src="images/play.jpg" onclick="play('<?php echo $resvidd['id'];?>')" style="width:100%; float:left; padding:0;"></a>
 							   
 						</div>
 					<?php
@@ -166,8 +166,8 @@ function play(video)
 					{
 					?>
 					<div class="videobox" style="margin-left:0px;">
-                                                                         <a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade">
-                                                                         <img src="images/play.jpg" onclick="play('<?php echo $resvidd['id'];?>')"></a>
+                                                                         <a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade" style="padding:0;">
+                                                                         <img src="images/play.jpg" onclick="play('<?php echo $resvidd['id'];?>')" style="width:100%; float:left; padding:0;"></a>
 							   
 					</div>
 					<?php
@@ -176,8 +176,8 @@ function play(video)
 					{
 					?>
 					<div class="videobox">
-                                                                         <a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade">
-                                                                         <img src="images/play.jpg" onclick="play('<?php echo $resvidd['id'];?>')"></a>
+                                                                         <a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade" style="padding:0;">
+                                                                         <img src="images/play.jpg" onclick="play('<?php echo $resvidd['id'];?>')" style="width:100%; float:left; padding:0;"></a>
 							   
 					</div>
 					<?php
@@ -253,8 +253,8 @@ function play(video)
 									 <param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param>
 									 <embed src="../admin/<?php echo $resvid['video'];?>" type="application/x-shockwave-flash" width="230" height="200" allowscriptaccess="always" allowfullscreen="true"></embed>
 									 </object>-->
-                                                                         <a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade">
-                                                                         <img src="images/play.jpg" onclick="play('<?php echo $resvid['id'];?>')"></a>
+                                                                         <a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade" style="padding:0;">
+                                                                         <img src="images/play.jpg" onclick="play('<?php echo $resvid['id'];?>')" style="width:100%; float:left; padding:0;"></a>
 							   
 						</div>
 					<?php
@@ -268,8 +268,8 @@ function play(video)
 									 <param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param>
 									 <embed src="../admin/<?php echo $resvid['video'];?>" type="application/x-shockwave-flash" width="230" height="200" allowscriptaccess="always" allowfullscreen="true"></embed>
 									 </object>-->
-                                                                         <a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade">
-                                                                         <img src="images/play.jpg" onclick="play('<?php echo $resvid['id'];?>')"></a>
+                                                                         <a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade" style="padding:0;">
+                                                                         <img src="images/play.jpg" onclick="play('<?php echo $resvid['id'];?>')" style="width:100%; float:left; padding:0;"></a>
 							   
 					</div>
 					<?php
@@ -283,8 +283,8 @@ function play(video)
 									 <param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param>
 									 <embed src="../admin/<?php echo $resvid['video'];?>" type="application/x-shockwave-flash" width="230" height="200" allowscriptaccess="always" allowfullscreen="true"></embed>
 									 </object>-->
-                                                                         <a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade">
-                                                                         <img src="images/play.jpg" onclick="play('<?php echo $resvid['id'];?>')"></a>
+                                                                         <a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade" style="padding:0;">
+                                                                         <img src="images/play.jpg" onclick="play('<?php echo $resvid['id'];?>')" style="width:100%; float:left; padding:0;"></a>
 							   
 					</div>
 					<?php

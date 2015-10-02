@@ -115,6 +115,8 @@ h2{
     color: #333;
     margin: 0;
 	padding:15px 0;
+	display: block;
+	clear: both;
 	/*background-color:#efefef;*/
 }
 h4{
