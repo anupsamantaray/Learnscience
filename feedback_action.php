@@ -25,5 +25,4 @@
 		$sentmail = mail($email,$subject,$feedback,$header);
 		$sentmail1 = mail($from,$subject,$feed,$header1);
     header("location:feedback.php");
-
 ?>
