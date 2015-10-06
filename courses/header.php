@@ -1,6 +1,7 @@
   <?php
 include_once("../function.php");
 include_once("../function1.php");
+date_default_timezone_set('Asia/Kolkata');
 ob_start();
 if ($_SESSION['name']){
  $name=$_SESSION['name'];

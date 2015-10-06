@@ -87,9 +87,8 @@ box-shadow: 0 0 5px #888;
     width:200px;
     height: auto;
     float: left;
-    
-    min-height: 900px;
-    border-right:1px solid #dedede;
+    min-height:auto;
+    /*border-right:1px solid #dedede;*/
    
 }
 .heading{
@@ -111,24 +110,28 @@ h3{
 }
 h2{
     font-family:arial;
-    font-size:22px;
-    font-weight: normal;
-    color: #333;
-    margin-top: 10px;
-	background-color:#efefef;
+    font-size:24px;
+    font-weight: 300;
+    color: #fff;
+    margin: 0;
+	padding:12px 0;
+	display: block;
+	clear: both;
+	/*background-color:#efefef;*/
 }
 h4{
     font-family: arial;
-    width:auto;
+    /*width:auto;
     height: auto;
     padding-top: 1%;
 	padding-bottom:1%;
-	padding-left:45px;
-    font-size:18px;
-    color: rgb(0, 112, 176);
-    background: #efefef;
-    font-weight: normal;
-    margin-bottom: 15px;
+	padding-left:45px;*/
+    font-size:16px;
+    color:#0059AB;
+    /*background: #efefef;*/
+    font-weight: 300;
+    margin:0;
+	padding:10px 0;
 }
 
 h5{
@@ -157,12 +160,12 @@ td{
     border:1px solid #dedede;
 }
 .videobox{
-    width:230px;
-    height: 200px;
+    width:80px;
+    height:50px;
     float: left;
-    border:1px solid #dedede;
-    margin-left: 20px;
-    margin-bottom: 30px;
+    /*border:1px solid #dedede;*/
+    margin:15px 5px;
+	/*clear:both;*/
 }
 .list{
     width:190px;
@@ -207,12 +210,18 @@ text-decoration:none;
     color: rgb(0, 112, 176);
 }
 #container_right{
-    width:755px;
+	width: 755px;
     height: auto;
     float: left;
-
-    min-height: 800px;
-    margin-left: 20px;
+    min-height: auto;
+    margin: 0px 0 0 12px;
+    padding: 30px 15px;
+    border-left: 1px solid #dedede;
+}
+#container_right h2{
+	background:#FFAB5B;
+	clear: both;
+	color:#fff;
 }
 #footer{
     width:100%;

@@ -8,7 +8,7 @@ if(isset($_POST['submit'])){
 		$res=mysql_num_rows($fet);
 		if($res==0){
 			mysql_query("insert into `adminlogin` (username, password, admin_type) values ('".$txtadusername."', '".$txtadpaassword."', '1')")or die(mysql_error());
-			$msg="Sub admin successfully added";
+			$msg="Sub admin added successfully.";
 		}else{
 			$msg="Sub admin already exists with this username. Try different username";
 		}

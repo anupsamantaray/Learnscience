@@ -297,193 +297,243 @@ function topval(subval,topvals,clval)
 <body>
 
 <?php include_once('header.php');
-$tot=0;
-                  if(isset($_POST['submit']))
-                  {
-                  echo $n1=$_REQUEST['1'];
-                   $nh1=$_REQUEST['h1'];
-                   if($n1==$nh1){$tot=$tot+1;}
-                   $n2=$_REQUEST['2'];
-                   $nh2=$_REQUEST['h2'];
-                   if($n2==$nh2){$tot=$tot+1;}
-                   $n3=$_REQUEST['3'];
-                   $nh3=$_REQUEST['h3'];
-                   if($n3==$nh3){$tot=$tot+1;}
-                   $n4=$_REQUEST['4'];
-                   $nh4=$_REQUEST['h4'];
-                   if($n4==$nh4){$tot=$tot+1;}
-                   $n5=$_REQUEST['5'];
-                   $nh5=$_REQUEST['h5'];
-                   if($n5==$nh5){$tot=$tot+1;}
-                  ?>
-                  <script>getpopup(<?php echo $tot;?>)</script>
-                  <?php }?>
-    <div id="container">
-        <div id="container_content">
-            <div id="page">
-                <div id="container_left">
-                    <div class="heading">
-                        <h3>All Class</h3>
-                    </div>
-		      <ul style="margin-left: 0px; padding: 5px;">
-			<?php
-			$fet=mysql_query("select * from `student_class`");
-			while($res=mysql_fetch_array($fet))
-			{
-			 if($res['class']=='x'){
-			?>
-                        <li class="list active">
-                            <img src="images/arrow.png" style="float: left; margin-right: 5px;" />
-							<span class="sp" style="color:#0070B0;" onClick="return getval(<?php echo $res['id'];?>)">Class <?php echo $res['class'];?></span>
-                        </li><?php }else{?>
-			
-			 <li class="list">
-                            <img src="images/arrow.png" style="float: left; margin-right: 5px;" />
-							<span class="sp" style="color:#666;" onClick="return getval(<?php echo $res['id'];?>)">Class <?php echo $res['class'];?></span>
-                        </li>
-			<?php }
-			}?>
-                    </ul>
-                </div>
-                <div id="container_right" class="t1">
-                 <h5 class="h5_class" style="color: blue;">The following is a sample quiz and students can benefit from an extensive quiz program to improve their performance.</h5>
-		 <div id='cssmenu'>
-                 <form name="f" action="will_index1_action.php" method="post">
-		    <table>
-                    <tr>
-                    <td align="right"> For more quizzes <a href="#openModal" style="color:blue;">Click Here</a></td>
-                    </tr>
-                     <tr>
-                      <td>1.     A person throws a ball vertically upward with an initial velocity of 15 m/s.How high it goes?</td>
-                     </tr>
-                     <tr><td><input type="radio" name="1" value="1">11.5m</td></tr>
-                     <tr><td><input type="radio" name="1" value="2">12.5m</td></tr>
-                     <tr><td><input type="radio" name="1" value="3">8m</td></tr>
-                     <tr><td><input type="radio" name="1" value="4">6m</td></tr>
-                     <input type="hidden" name="h1" value="1">
-                     <tr>
-                      <td>2.     A body, whose momentum is constant, must have constant-</td>
-                     </tr>
-                     <tr><td><input type="radio" name="2" value="1">Force</td></tr>
-                     <tr><td><input type="radio" name="2" value="2">Velocity</td></tr>
-                     <tr><td><input type="radio" name="2" value="3">Acceleration</td></tr>
-                     <tr><td><input type="radio" name="2" value="4">All of these</td></tr>
-                     <input type="hidden" name="h2" value="2">
-                     <tr>
-                      <td>3.     A man getting down a running bus, falls forward because-</td>
-                     </tr>
-                     <tr><td><input type="radio" name="3" value="1">due to inertia of rest, road is left behind and man reaches forward</td></tr>
-                     <tr><td><input type="radio" name="3" value="2">due to inertia of motion upper part of body continues to be in motion in forward direction while feet come to rest as soon as they touch the road</td></tr>
-                     <tr><td><input type="radio" name="3" value="3">he leans forward as a matter of habit</td></tr>
-                     <tr><td><input type="radio" name="3" value="4">of the combined effect of all the three factors stated in (1), (2) and (3)</td></tr>
-                     <input type="hidden" name="h3" value="3">
-                     <tr>
-                      <td>4.     Which of the following class of forces is different from others -</td>
-                     </tr>
-                     <tr><td><input type="radio" name="4" value="1">Pulling of a cart</td></tr>
-                     <tr><td><input type="radio" name="4" value="2">Stretching of a coiled spring</td></tr>
-                     <tr><td><input type="radio" name="4" value="3">Kicking of a football</td></tr>
-                     <tr><td><input type="radio" name="4" value="4">Electrical force</td></tr>
-                     <input type="hidden" name="h4" value="4">
-                     <tr>
-                      <td>5.     The speed of a falling body increases continuously, this is because -</td>
-                     </tr>
-                     <tr><td><input type="radio" name="5" value="1">No force acts on it</td></tr>
-                     <tr><td><input type="radio" name="5" value="2">It is very light</td></tr>
-                     <tr><td><input type="radio" name="5" value="3">The air exert the frictional force</td></tr>
-                     <tr><td><input type="radio" name="5" value="4">The earth attract it</td></tr>
-                     <input type="hidden" name="h5" value="4">
-                     <tr><td><input type="submit" name="submit" value="submit"></td></tr>
-                    </table>
-                   </form>
-		 </div>
-                </div>
-               <!-- <div class="quizzes">For more quizzes <a href="#openModal">click here</a></div>-->
-	                <div id="openModal" class="modalDialog">
-							<div>
-                            <style>
-							#cross:link {color:blue;}
-							#cross:visited {color: blue;}
-							#cross:hover {color: blue;}
-							#cross:active {color: blue;}
-								
-							</style>
-									<div align="right" ><span style="text-align:right;"><a  href="#close" id='cross' title="Close" class="close">X</a></span></div>
-									<center><h2>Create Account</h2></center>
-									<form name="creataccount" action="../creataction.php" method="post" onSubmit="return validate();" enctype="multipart/form-data">
-		<table border='0' style="width:100%; height:250px; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#333;">
-				<tr>
-						<td>Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-						<td><input type="text" name="name" id="name"  class="form2"/></td>
-				</tr>
-				<tr>
-						<td>Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-						<td><input type="text" name="email" id="email"  class="form2"/></td>
-				</tr>
-				<tr>
-						<td>Contact &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-						<td><input type="text" name="phone" id="phone" class="form2" onKeyUp="return numberonly();"/></td>
-				</tr>
-				<tr>
-						<td>Class &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-						<td>
-						<select  name="class" id="class"  class="form2" style="height:28px;width:175px ;  padding:0px;">
-						<option value="0">select</option>
-						<?php
-						$sqlcls=mysql_query("select * from `student_class`");
-						while($rescls=mysql_fetch_array($sqlcls)){
+	$tot=0;
+	if(isset($_POST['submit'])){
+		echo $n1=$_REQUEST['1'];
+		$nh1=$_REQUEST['h1'];
+		if($n1==$nh1){
+			$tot=$tot+1;
+		}
+		$n2=$_REQUEST['2'];
+		$nh2=$_REQUEST['h2'];
+		if($n2==$nh2){
+			$tot=$tot+1;
+		}
+		$n3=$_REQUEST['3'];
+		$nh3=$_REQUEST['h3'];
+		if($n3==$nh3){
+			$tot=$tot+1;
+		}
+		$n4=$_REQUEST['4'];
+		$nh4=$_REQUEST['h4'];
+		if($n4==$nh4){
+			$tot=$tot+1;
+		}
+		$n5=$_REQUEST['5'];
+		$nh5=$_REQUEST['h5'];
+	   if($n5==$nh5){
+			$tot=$tot+1;
+		}
+  ?>
+<script>getpopup(<?php echo $tot;?>)</script>
+<?php }?>
+<div id="container">
+	<div id="container_content">
+		<div id="page">
+			<div id="container_left">
+				<div class="heading">
+					<h3>All Class</h3>
+				</div>
+				<ul style="margin-left: 0px; padding: 5px;">
+					<?php
+					$fet=mysql_query("select * from `student_class`");
+					while($res=mysql_fetch_array($fet)){
+						if($res['class']=='x'){
+					?>
+							<li class="list active">
+								<img src="images/arrow.png" style="float: left; margin-right: 5px;" />
+								<span class="sp" style="color:#0070B0;" onClick="return getval(<?php echo $res['id'];?>)">Class <?php echo $res['class'];?></span>
+							</li>
+						<?php 
+						}else{
 						?>
-						<option value="<?php echo $rescls['id'];?>"><?php echo $rescls['class'];?></option>
-						<?php
+				
+							<li class="list">
+								<img src="images/arrow.png" style="float: left; margin-right: 5px;" />
+								<span class="sp" style="color:#666;" onClick="return getval(<?php echo $res['id'];?>)">Class <?php echo $res['class'];?></span>
+							</li>
+					<?php 
 						}
-						?>
-						</select>
-						<!--<input type="text" name="class" id="class"  class="form2"/>-->
-						</td>
-				</tr>
-				<tr>
-						<td>School &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-						<td><input type="text" name="school" id="school" class="form2"/></td>
-				</tr>
-				<tr>
-						<td>City &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-						<td><input type="text" name="city" id="city" class="form2"/></td>
-				</tr>
-				<tr>
-						<td>Password &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-						<td> <input type="password" name="pass" id="pass" class="form2"/></td>
-				</tr>
-				<tr>
-						<td>Confirm Pwd &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-						<td> <input type="password" name="confirm" id="confirm" class="form2"/></td>
-				</tr>
-				<tr>
-						<td>Upload Photo</td>
-						<td><input type="file" name="fileToUpload" id="fileToUpload" /></td>
-				</tr>
-				<tr>
-						<td colspan='2'>
+					}?>
+				</ul>
+			</div>
+			<div id="container_right" class="t1">
+                 <h5 class="h5_class" style="color: blue;">The following is a sample quiz and students can benefit from an extensive quiz program to improve their performance.</h5>
+				<div id='cssmenu'>
+					<form name="f" action="will_index1_action.php" method="post">
+						<table>
+							<tr>
+								<td align="right"> For more quizzes <a href="#openModal" style="color:blue;">Click Here</a></td>
+							</tr>
+							<tr>
+								<td>1.     A person throws a ball vertically upward with an initial velocity of 15 m/s.How high it goes?</td>
+							</tr>
+							<tr>
+								<td><input type="radio" name="1" value="1">11.5m</td>
+							</tr>
+							<tr>
+								<td><input type="radio" name="1" value="2">12.5m</td>
+							</tr>
+							<tr>
+								<td><input type="radio" name="1" value="3">8m</td>
+							</tr>
+							<tr>
+								<td><input type="radio" name="1" value="4">6m</td>
+							</tr>
+							<input type="hidden" name="h1" value="1">
+							<tr>
+								<td>2.     A body, whose momentum is constant, must have constant-</td>
+							</tr>
+							 <tr>
+								<td><input type="radio" name="2" value="1">Force</td>
+							</tr>
+							 <tr>
+								<td><input type="radio" name="2" value="2">Velocity</td>
+							</tr>
+							<tr>
+								<td><input type="radio" name="2" value="3">Acceleration</td>
+							</tr>
+							<tr>
+								<td><input type="radio" name="2" value="4">All of these</td>
+							</tr>
+							<input type="hidden" name="h2" value="2">
+							<tr>
+								<td>3.     A man getting down a running bus, falls forward because-</td>
+							</tr>
+							<tr>
+								<td><input type="radio" name="3" value="1">due to inertia of rest, road is left behind and man reaches forward</td>
+							</tr>
+							<tr>
+								<td><input type="radio" name="3" value="2">due to inertia of motion upper part of body continues to be in motion in forward direction while feet come to rest as soon as they touch the road</td>
+							</tr>
+							<tr>
+								<td><input type="radio" name="3" value="3">he leans forward as a matter of habit</td>
+							</tr>
+							<tr>
+								<td><input type="radio" name="3" value="4">of the combined effect of all the three factors stated in (1), (2) and (3)</td>
+							</tr>
+							<input type="hidden" name="h3" value="3">
+							<tr>
+								<td>4.     Which of the following class of forces is different from others -</td>
+							</tr>
+							<tr>
+								<td><input type="radio" name="4" value="1">Pulling of a cart</td>
+							</tr>
+							<tr>
+								<td><input type="radio" name="4" value="2">Stretching of a coiled spring</td>
+							</tr>
+							<tr>
+								<td><input type="radio" name="4" value="3">Kicking of a football</td>
+							</tr>
+							<tr>
+								<td><input type="radio" name="4" value="4">Electrical force</td>
+							</tr>
+							<input type="hidden" name="h4" value="4">
+							<tr>
+								<td>5.     The speed of a falling body increases continuously, this is because -</td>
+							</tr>
+							<tr>
+								<td><input type="radio" name="5" value="1">No force acts on it</td>
+							</tr>
+							<tr>
+								<td><input type="radio" name="5" value="2">It is very light</td>
+							</tr>
+							<tr>
+								<td><input type="radio" name="5" value="3">The air exert the frictional force</td>
+							</tr>
+							<tr>
+								<td><input type="radio" name="5" value="4">The earth attract it</td>
+							</tr>
+							<input type="hidden" name="h5" value="4">
+							<tr>
+								<td><input type="submit" name="submit" value="submit"></td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>
+	   <!-- <div class="quizzes">For more quizzes <a href="#openModal">click here</a></div>-->
+			<div id="openModal" class="modalDialog">
+				<div>
+					<style>
+						#cross:link {color:blue;}
+						#cross:visited {color: blue;}
+						#cross:hover {color: blue;}
+						#cross:active {color: blue;}
+					</style>
+					<div align="right" ><span style="text-align:right;"><a  href="#close" id='cross' title="Close" class="close">X</a></span></div>
+					<center><h2>Create Account</h2></center>
+					<form name="creataccount" action="../creataction.php" method="post" onSubmit="return validate();" enctype="multipart/form-data">
+						<table border='0' style="width:100%; height:250px; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#333;">
+							<tr>
+								<td>Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								<td><input type="text" name="name" id="name"  class="form2"/></td>
+							</tr>
+							<tr>
+								<td>Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								<td><input type="text" name="email" id="email"  class="form2"/></td>
+							</tr>
+							<tr>
+								<td>Contact &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								<td><input type="text" name="phone" id="phone" class="form2" onKeyUp="return numberonly();"/></td>
+							</tr>
+							<tr>
+								<td>Class &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								<td>
+								<select  name="class" id="class"  class="form2" style="height:28px;width:175px ;  padding:0px;">
+								<option value="0">select</option>
+								<?php
+								$sqlcls=mysql_query("select * from `student_class`");
+								while($rescls=mysql_fetch_array($sqlcls)){
+								?>
+								<option value="<?php echo $rescls['id'];?>"><?php echo $rescls['class'];?></option>
+								<?php
+								}
+								?>
+								</select>
+								<!--<input type="text" name="class" id="class"  class="form2"/>-->
+								</td>
+							</tr>
+							<tr>
+								<td>School &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								<td><input type="text" name="school" id="school" class="form2"/></td>
+							</tr>
+							<tr>
+								<td>City &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								<td><input type="text" name="city" id="city" class="form2"/></td>
+							</tr>
+							<tr>
+								<td>Password &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								<td> <input type="password" name="pass" id="pass" class="form2"/></td>
+							</tr>
+							<tr>
+								<td>Confirm Pwd &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								<td> <input type="password" name="confirm" id="confirm" class="form2"/></td>
+							</tr>
+							<tr>
+								<td>Upload Photo</td>
+								<td><input type="file" name="fileToUpload" id="fileToUpload" /></td>
+							</tr>
+							<tr>
+								<td colspan='2'>
 								<center>&nbsp;&nbsp;<input type="submit" name="button" value="        Log In        " class="button1" style="background:#69a4ce; border-radius:3px; border:1px solid #5589b0;"/></center>
-						</td>
-				</tr>
-		</table>
-	<!--	<a class="close-reveal-modal">&#215;</a>-->
-		</form>
-							</div>
-					</div>
-            </div>
-        </div>
-        
-    </div>
-	
-   <!-- <div id="myModal1" class="reveal-modal" style="width:400px;">
-	<div class="vide">
-	 Exams are made easy through unique teaching tools in our website. So Students ..no more fear.. !!
-Our educational content is created in a way to improvise the speed and ease of learning by any student of any talent level. Even a weak student can easily cross the exam hurdles by following our education content. A few hours study on our website  in exam time can help you easily pass and excel in the exam.. "			
+								</td>
+							</tr>
+						</table>
+					<!--	<a class="close-reveal-modal">&#215;</a>-->
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
-	<a class="close-reveal-modal">&#215;</a>
-    </div>-->
-   
-   <?php include_once('footer.php')?>
+</div>
+<!-- <div id="myModal1" class="reveal-modal" style="width:400px;">
+<div class="vide">
+Exams are made easy through unique teaching tools in our website. So Students ..no more fear.. !!
+Our educational content is created in a way to improvise the speed and ease of learning by any student of any talent level. Even a weak student can easily cross the exam hurdles by following our education content. A few hours study on our website  in exam time can help you easily pass and excel in the exam.. "			
+</div>
+<a class="close-reveal-modal">&#215;</a>
+</div>-->
+<?php include_once('footer.php')?>
 </body>
 </html>

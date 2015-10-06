@@ -1,9 +1,9 @@
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
 
-</head>
+	</head>
 <body>
 <div class="list_menu">
 								 <ul>
@@ -94,18 +94,18 @@
 											<a href="adminlogout.php"><i class="icon-chevron-right"><img src="image/1.png" /></i>Logout</a>
 										</li>
 
-										
-										<!--<li>
-											<a href="quiz_add.php"><i class="icon-chevron-right"><img src="image/1.png" /></i>Add Quiz</a>
-										</li>
-										<li>
-											<a href="popular_sub.php"><i class="icon-chevron-right"><img src="image/1.png" /></i>popular subject</a>
-										</li>
-										<li>
-											<a href="popular_video.php"><i class="icon-chevron-right"><img src="image/1.png" /></i>popular video</a>
-										</li>-->
-						  		</ul>
-						</div>
+					
+		<!--<li>
+			<a href="quiz_add.php"><i class="icon-chevron-right"><img src="image/1.png" /></i>Add Quiz</a>
+		</li>
+		<li>
+			<a href="popular_sub.php"><i class="icon-chevron-right"><img src="image/1.png" /></i>popular subject</a>
+		</li>
+		<li>
+			<a href="popular_video.php"><i class="icon-chevron-right"><img src="image/1.png" /></i>popular video</a>
+		</li>-->
+	</ul>
+</div>
 
 </body>
 </html>

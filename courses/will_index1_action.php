@@ -317,561 +317,504 @@ function alertFunc1()
 <body onLoad="popup()">
 
 <?php include_once('header.php');
-$tot=0;
-                  if(isset($_POST['submit']))
-                  {
-                   if(!empty($_POST['1']))
-				   {
-				   	$n1=$_POST['1'];
-                   	$nh1=$_POST['h1'];
-                   	if($n1==$nh1)
-					{
-						$tot=$tot+1;
-					}
-				   }
-				   if(!empty($_POST['2']))
-				   {
-                    $n2=$_POST['2'];
-                    $nh2=$_POST['h2'];
-                    if($n2==$nh2)
-					{
-						$tot=$tot+1;
-					}
-				   }
-				   if(!empty($_POST['3']))
-				   {
-                    $n3=$_POST['3'];
-                    $nh3=$_POST['h3'];
-                    if($n3==$nh3)
-					{
-						$tot=$tot+1;
-					}
-				   }
-				   if(!empty($_POST['4']))
-				   {
-                    $n4=$_POST['4'];
-                    $nh4=$_POST['h4'];
-                    if($n4==$nh4)
-					{
-						$tot=$tot+1;
-					}
-				   }
-				   if(!empty($_POST['5']))
-				   {
-                   	$n5=$_POST['5'];
-                   	$nh5=$_POST['h5'];
-                   	if($n5==$nh5)
-					{
-						$tot=$tot+1;
-					}
-				   }
-                  ?>
-                  
-                  <?php }?>
-    <div id="container">
-        <div id="container_content">
-            <div id="page">
-                <div id="container_left">
-                    <div class="heading">
-                        <h3>All Class</h3>
-                    </div>
-		      <ul style="margin-left: 0px; padding: 5px;">
-			<?php
-			$fet=mysql_query("select * from `student_class`");
-			while($res=mysql_fetch_array($fet))
-			{
-			 if($res['class']=='x'){
-			?>
-                        <li class="list active">
-                            <img src="images/arrow.png" style="float: left; margin-right: 5px;" />
-							<span class="sp" style="color:#0070B0;" onClick="return getval(<?php echo $res['id'];?>)">Class <?php echo $res['class'];?></span>
-                        </li><?php }else{?>
-			
-			 <li class="list">
-                            <img src="images/arrow.png" style="float: left; margin-right: 5px;" />
-							<span class="sp" style="color:#666;" onClick="return getval(<?php echo $res['id'];?>)">Class <?php echo $res['class'];?></span>
-                        </li>
-			<?php }
-			}?>
-                    </ul>
-                </div>
-                <div id="container_right" class="t1">
-                 
-		 <div id='cssmenu'>
-         <a href="#openModal" style="color:blue;" id="clickid"></a>
-                 <table>
-                    <tr>
+	$tot=0;
+	if(isset($_POST['submit'])){
+		if(!empty($_POST['1'])){
+			$n1=$_POST['1'];
+           	$nh1=$_POST['h1'];
+           	if($n1==$nh1){
+				$tot=$tot+1;
+			}
+		}
+		if(!empty($_POST['2'])){
+			$n2=$_POST['2'];
+			$nh2=$_POST['h2'];
+			if($n2==$nh2){
+				$tot=$tot+1;
+			}
+		}
+	   if(!empty($_POST['3'])){
+			$n3=$_POST['3'];
+			$nh3=$_POST['h3'];
+			if($n3==$nh3){
+				$tot=$tot+1;
+			}
+		}
+		if(!empty($_POST['4'])){
+			$n4=$_POST['4'];
+			$nh4=$_POST['h4'];
+			if($n4==$nh4){
+				$tot=$tot+1;
+			}
+		}
+		if(!empty($_POST['5']))
+		{
+			$n5=$_POST['5'];
+			$nh5=$_POST['h5'];
+			if($n5==$nh5){
+				$tot=$tot+1;
+			}
+		}
+	}
+?>
+<div id="container">
+	<div id="container_content">
+		<div id="page">
+			<div id="container_left">
+				<div class="heading">
+					<h3>All Class</h3>
+				</div>
+				<ul style="margin-left: 0px; padding: 5px;">
+				<?php
+					$fet=mysql_query("select * from `student_class`");
+					while($res=mysql_fetch_array($fet)){
+						if($res['class']=='x'){
+						?>
+							<li class="list active">
+								<img src="images/arrow.png" style="float: left; margin-right: 5px;" />
+								<span class="sp" style="color:#0070B0;" onClick="return getval(<?php echo $res['id'];?>)">Class <?php echo $res['class'];?></span>
+							</li><?php 
+						}else{	?>
+							<li class="list">
+								<img src="images/arrow.png" style="float: left; margin-right: 5px;" />
+								<span class="sp" style="color:#666;" onClick="return getval(<?php echo $res['id'];?>)">Class <?php echo $res['class'];?></span>
+							</li>
+					<?php 
+						}
+					}?>
+				</ul>
+			</div>
+			<div id="container_right" class="t1">
+				<div id='cssmenu'>
+					<a href="#openModal" style="color:blue;" id="clickid"></a>
+					<table>
+						<tr>
                     		<td align="center">
                             	<h1> 
                                 	Your score is <?php echo($tot); ?> out of 5
                                 </h1>
-                             </td>
-                    </tr>
-                    <tr>
-                    	<td style="background-color:#efefef;"><span style="font-size:22px;font-weight:bold;padding-left:10px;">Question 1</span></td>
-                    </tr>
-                     <tr>
-                      <td><b> A person throws a ball vertically upward with an initial velocity of 15 m/s.How high it goes?</b></td>
-                     </tr>
-                     <tr><td style="padding-left:15px;">
-                     <?php 
-					 	if(!empty($_POST['1']))
-						{
-							if($_POST['1']=='1')
-							{
-					 ?>
-                    			1.) 11.5m &nbsp;&nbsp;&nbsp;<img src='../correct.jpg'>
-                     <?php
+							</td>
+						</tr>
+						<tr>
+							<td style="background-color:#efefef;"><span style="font-size:22px;font-weight:bold;padding-left:10px;">Question 1</span></td>
+						</tr>
+						<tr>
+							<td><b> A person throws a ball vertically upward with an initial velocity of 15 m/s.How high it goes?</b></td>
+						</tr>
+						<tr>
+							<td style="padding-left:15px;">
+							 <?php 
+								if(!empty($_POST['1'])){
+									if($_POST['1']=='1'){
+							 ?>
+										1.) 11.5m &nbsp;&nbsp;&nbsp;<img src='../correct.jpg'>
+							 <?php
+									}
+									else{
+							 ?>
+										1.)11.5m	
+							 <?php
+									}
+								}
+								else{
+									echo("1.) 11.5m");
+								}
+							 ?>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding-left:15px;">
+						  <?php 
+							if(!empty($_POST['1']))	{
+									if($_POST['1']=='2')
+								{
+						 ?>
+									2.) 12.5m &nbsp;&nbsp;&nbsp;<img src='../wrong.jpg'>
+						  <?php
+								}
+								else{
+						  ?> 
+									2.) 12.5m
+						  <?php
+								}
 							}
-							else
-							{
-					 ?>
-                     			1.)11.5m	
-                     <?php
-							}
-						}
-						else
-						{
-								echo("1.) 11.5m");
-						}
-					 ?>
-                     
-                     </td></tr>
-                     <tr><td style="padding-left:15px;">
-                      <?php 
-					 	if(!empty($_POST['1']))
-						{
-							if($_POST['1']=='2')
-							{
-					 ?>
-                     			2.) 12.5m &nbsp;&nbsp;&nbsp;<img src='../wrong.jpg'>
-                      <?php
-							}
-							else
-							{
-					  ?> 
-                      			2.) 12.5m
-                      <?php
-							}
-						}
-						else
-						{
+							else{
 								echo("2.) 12.5m");
-						}
-					  ?> 
-                        </td></tr>
-                     <tr><td style="padding-left:15px;">
-                     <?php 
-					 if(!empty($_POST['1']))
-						{
-					 		if($_POST['1']=='3')
-							{
-					 ?>
-                  				  3.)  8m &nbsp;&nbsp;&nbsp;<img src='../wrong.jpg'>
-                      <?php
 							}
-							else
-							{
-					  ?> 
-                     			 3.) 8m
-                      <?php
+						  ?> 
+							</td>
+						</tr>
+					<tr>
+						<td style="padding-left:15px;">
+							 <?php 
+							if(!empty($_POST['1'])){
+									if($_POST['1']=='3'){
+								?>
+										  3.)  8m &nbsp;&nbsp;&nbsp;<img src='../wrong.jpg'>
+							  <?php
+									}
+									else{
+							  ?> 
+										 3.) 8m
+							  <?php
+									}
 							}
-						}
-					else
-					{
-							echo("3.) 8m");
-					}
-						?>
-                     </td></tr>
-                     <tr><td style="padding-left:15px;">
-                      <?php 
-					 	if(!empty($_POST['1']))
-						{
-							if($_POST['1']=='4')
-							{
-					 ?>
-			                     4.) 6m &nbsp;&nbsp;&nbsp;<img src='../wrong.jpg'>
-                     <?php
+							else{
+									echo("3.) 8m");
 							}
-							else
-							{
-					  ?>
-                     			 4.) 6m
-                      <?php
+								?>
+						</td>
+					</tr>
+					<tr>
+						<td style="padding-left:15px;">
+						  <?php 
+							if(!empty($_POST['1'])){
+								if($_POST['1']=='4'){
+						 ?>
+								 4.) 6m &nbsp;&nbsp;&nbsp;<img src='../wrong.jpg'>
+						 <?php
+								}
+								else{
+						  ?>
+									 4.) 6m
+						  <?php
+								}
 							}
-						}
-						else
-						{
-								echo("4.) 6m");	
-						}
-						?> 
-                     </td></tr>
+							else{
+									echo("4.) 6m");	
+							}
+							?> 
+						</td>
+					</tr>
                      
                      <?php
-					 if(!empty($_POST['1']))
-						{
-					 		if($_POST['1']!='1')
-							{
+					if(!empty($_POST['1'])){
+					 		if($_POST['1']!='1'){
 								echo('<tr><td style="padding-left:15px;"><b><span style="color:blue">Correct&nbsp; Answer&nbsp;&nbsp;&nbsp; : </span>11.5m</b></td></tr>');
 							}
 						}
-					else
-						{
-								echo('<tr><td style="padding-left:15px;"><b><span style="color:blue">Correct&nbsp; Answer&nbsp;&nbsp;&nbsp; : </span>11.5m</b></td></tr>');
+						else{
+							echo('<tr><td style="padding-left:15px;"><b><span style="color:blue">Correct&nbsp; Answer&nbsp;&nbsp;&nbsp; : </span>11.5m</b></td></tr>');
 						}	
 					 ?>
                      <tr><td><hr></td></tr>
-                     
-                     
                      <tr>
                     	<td style="background-color:#efefef;"><span style="font-size:22px;font-weight:bold;padding-left:10px;">Question 2</span></td>
                     </tr>
-                     <tr> <td><b> A body, whose momentum is constant, must have constant-</b></td>
-                     </tr>
-                     <tr><td style="padding-left:15px;">
-                     <?php
-					   if(!empty($_POST['2']))
-						{
-					 		if($_POST['2']=='1')
-							{
-					 ?>
-                     			1.) Force &nbsp;&nbsp;&nbsp;<img src='../wrong.jpg'>
-                     <?php
+					<tr><td><b> A body, whose momentum is constant, must have constant-</b></td>
+					</tr>
+					<tr>
+						<td style="padding-left:15px;">
+						 <?php
+						   if(!empty($_POST['2'])){
+								if($_POST['2']=='1'){
+						 ?>
+								1.) Force &nbsp;&nbsp;&nbsp;<img src='../wrong.jpg'>
+						 <?php
+								}
+								else{
+							?>
+								  1.)  Force 
+							<?php
+								}
 							}
-							else
-							{
-						?>
-                    			  1.)  Force 
-                        <?php
-							}
-						}
-						else
-						{
+							else{
 								echo("1.)  Force ");
-						}
-						?>
-                        
-                     </td></tr>
-                     <tr><td style="padding-left:15px;">
-                      <?php
-					   if(!empty($_POST['2']))
-						{ 
-					 		if($_POST['2']=='2')
-							{
-					 ?>
-                     			2.) Velocity&nbsp;&nbsp;&nbsp;<img src='../correct.jpg'>
-                     <?php
 							}
-							else
-							{
-					 ?>
-                    			2.) Velocity
-                     <?php
+							?>
+						</td>
+					</tr>
+					<tr>
+						<td style="padding-left:15px;">
+						  <?php
+						   if(!empty($_POST['2'])){ 
+								if($_POST['2']=='2'){
+						 ?>
+									2.) Velocity&nbsp;&nbsp;&nbsp;<img src='../correct.jpg'>
+						 <?php
+								}
+								else{
+						 ?>
+									2.) Velocity
+						 <?php
+								}
 							}
-						}
-						else
-						{
+							else{
 								echo("2.) Velocity");
-						}
-						?>
-                     </td></tr>
-                     <tr><td style="padding-left:15px;">
-                     <?php
-					 if(!empty($_POST['2']))
-						{ 
-					 		if($_POST['2']=='3')
-					 		{
-						 ?>
-                     			3.) Acceleration &nbsp;&nbsp;&nbsp;<img src='../wrong.jpg'>
-                     <?php
-					 		}
-					 		else
-					 		{
-					 ?>
-                     			3.) Acceleration
-                     <?php
-					 		}
-						}
-						else
-						{
-								echo("3.) Accelaration");
-						}
-					 ?>
-                     </td></tr>
-                     <tr><td style="padding-left:15px;">
-                     <?php
-					 if(!empty($_POST['2']))
-						{ 
-					 		if($_POST['2']=='4')
-					 		{
-						 ?>
-                     			4.) All of these &nbsp;&nbsp;&nbsp;<img src='../wrong.jpg'>
-                        <?php
-					 		}
-					 		else
-					 		{
-					 ?>			4.) All of these
-                     <?php
-					 		}
-						}
-						else
-						{
-							echo("4.) All of these");	
-						}
-					 ?>
-                        </td></tr>
-                        <?php
-						if(!empty($_POST['2']))
-						{ 
-					 		if($_POST['2']!='2')
-							{
+							}
+							?>
+						</td>
+					</tr>
+					<tr>
+						<td style="padding-left:15px;">
+							 <?php
+							 if(!empty($_POST['2']))
+								{ 
+									if($_POST['2']=='3')
+									{
+								 ?>
+										3.) Acceleration &nbsp;&nbsp;&nbsp;<img src='../wrong.jpg'>
+							 <?php
+									}
+									else{
+							 ?>
+										3.) Acceleration
+							 <?php
+									}
+								}
+								else{
+									echo("3.) Accelaration");
+								}
+							 ?>
+						</td>
+					</tr>
+					<tr>
+						<td style="padding-left:15px;">
+							<?php
+							if(!empty($_POST['2'])){ 
+								if($_POST['2']=='4'){
+									?>
+										4.) All of these &nbsp;&nbsp;&nbsp;<img src='../wrong.jpg'>
+									<?php
+									}
+									else{
+								 ?>		4.) All of these
+								 <?php
+									}
+								}
+								else{
+									echo("4.) All of these");	
+								}
+							 ?>
+						</td>
+					</tr>
+					<?php
+					if(!empty($_POST['2'])){ 
+					 		if($_POST['2']!='2'){
 								echo('<tr><td style="padding-left:15px;"><b><span style="color:blue">Correct&nbsp; Answer&nbsp;&nbsp;&nbsp; : </span>Velocity</b></td></tr>');
 							}
 						}
-						else
-						{
-								echo('<tr><td style="padding-left:15px;"><b><span style="color:blue">Correct&nbsp; Answer&nbsp;&nbsp;&nbsp; : </span>Velocity</b></td></tr>');
+						else{
+							echo('<tr><td style="padding-left:15px;"><b><span style="color:blue">Correct&nbsp; Answer&nbsp;&nbsp;&nbsp; : </span>Velocity</b></td></tr>');
 						}
 					 ?>
-                     <tr><td><hr></td></tr>
-                    
+						<tr><td><hr></td></tr>
+						<tr>
+							<td style="background-color:#efefef;"><span style="font-size:22px;font-weight:bold;padding-left:10px;">Question 3</span></td>
+						</tr>
+						<tr>
+							<td><b> A man getting down a running bus, falls forward because-</b></td>
+						</tr>
+						<tr>
+							<td style="padding-left:15px;">
+								 <?php
+								 if(!empty($_POST['3'])){ 
+										if($_POST['3']=='1'){
+											?>1.) due to inertia of rest, road is left behind and man reaches forward &nbsp;&nbsp;&nbsp;<img src='../wrong.jpg'>
+										<?php
+										 }
+										else{
+									 ?>
+											1.) due to inertia of rest, road is left behind and man reaches forward
+									 <?php
+										 }
+									}
+									else{
+										echo("1.) due to inertia of rest, road is left behind and man reaches forward");
+									}
+								?>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding-left:15px;">
+								 <?php
+								 if(!empty($_POST['3'])){ 
+										if($_POST['3']=='2'){
+									 ?>
+											2.) due to inertia of motion upper part of body continues to be in motion in forward direction while feet come to rest as soon as they touch the road &nbsp;&nbsp;&nbsp;<img src='../wrong.jpg'>
+								 <?php
+										}
+										else{
+								 ?>
+											2.) due to inertia of motion upper part of body continues to be in motion in forward direction while feet come to rest as soon as they touch the road
+								 <?php
+										}
+								}
+								else{
+									echo("2.) due to inertia of motion upper part of body continues to be in motion in forward direction while feet come to rest as soon as they touch the road");
+								}?>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding-left:15px;">
+								<?php
+								if(!empty($_POST['3'])){
+									 if($_POST['3']=='3'){
+								 ?>		3.) he leans forward as a matter of habit &nbsp;&nbsp;&nbsp;<img src='../correct.jpg'>
+								 <?php
+									}
+									else{
+								 ?>
+									3.) he leans forward as a matter of habit
+								 <?php
+										}
+									}
+									else{
+										echo("3.) he leans forward as a matter of habit");
+									}
+								 ?>
+							</td>
+						</tr>
                      <tr>
-                    	<td style="background-color:#efefef;"><span style="font-size:22px;font-weight:bold;padding-left:10px;">Question 3</span></td>
-                    </tr>
-                     <tr>
-                      <td><b> A man getting down a running bus, falls forward because-</b></td>
-                     </tr>
-                     <tr><td style="padding-left:15px;">
-                     <?php
-					 if(!empty($_POST['3']))
-						{ 
-							 if($_POST['3']=='1')
-							 {
-						 ?>			1.) due to inertia of rest, road is left behind and man reaches forward &nbsp;&nbsp;&nbsp;<img src='../wrong.jpg'>
-                         <?php
-					 		 }
-					 		else
-							 {
+						<td style="padding-left:15px;">
+						  <?php
+						  if(!empty($_POST['3'])){
+								if($_POST['3']=='4'){
+							 ?>		4.) of the combined effect of all the three factors stated in (1), (2) and (3)&nbsp;&nbsp;&nbsp;<img src='../wrong.jpg'>
+							 <?php
+								}
+								else{
+							 ?>		4.) of the combined effect of all the three factors stated in (1), (2) and (3)
+							 <?php
+								}
+							}
+							else{
+									echo("4.) of the combined effect of all the three factors stated in (1), (2) and (3)");
+							}
 						 ?>
-                        		 1.) due to inertia of rest, road is left behind and man reaches forward
-                         <?php
-					 		 }
-						}
-						else
-						{
-								echo("1.) due to inertia of rest, road is left behind and man reaches forward");
-						}
-					 ?>
-                         </td></tr>
-                     <tr><td style="padding-left:15px;">
-                     <?php
-					 if(!empty($_POST['3']))
-						{ 
-					 		if($_POST['3']=='2')
-					 		{
-						 ?>
-                     			2.) due to inertia of motion upper part of body continues to be in motion in forward direction while feet come to rest as soon as they touch the road &nbsp;&nbsp;&nbsp;<img src='../wrong.jpg'>
-                     <?php
-					 		}
-					 		else
-					 		{
-					 ?>
-                     			2.) due to inertia of motion upper part of body continues to be in motion in forward direction while feet come to rest as soon as they touch the road
-                     <?php
-					 		}
-						}
-						else
-						{
-							echo("2.) due to inertia of motion upper part of body continues to be in motion in forward direction while feet come to rest as soon as they touch the road");
-						}?>
-                     </td></tr>
-                     <tr><td style="padding-left:15px;">
+						</td>
+					</tr>
                       <?php
-					  if(!empty($_POST['3']))
-						{
-							 if($_POST['3']=='3')
-					 		{
-						 ?>		3.) he leans forward as a matter of habit &nbsp;&nbsp;&nbsp;<img src='../correct.jpg'>
-                         <?php
-					 		}
-							else
-					 		{
-					 ?>
-                     			3.) he leans forward as a matter of habit
-                     <?php
-					 		}
-						}
-						else
-						{
-								echo("3.) he leans forward as a matter of habit");
-						}
-                     ?></td></tr>
-                     <tr><td style="padding-left:15px;">
-                      <?php
-					  if(!empty($_POST['3']))
-						{
-					 		if($_POST['3']=='4')
-					 		{
-						 ?>		4.) of the combined effect of all the three factors stated in (1), (2) and (3)&nbsp;&nbsp;&nbsp;<img src='../wrong.jpg'>
-                         <?php
-					 		}
-					 		else
-					 		{
-						 ?>		4.) of the combined effect of all the three factors stated in (1), (2) and (3)
-                         <?php
-					 		}
-						}
-						else
-						{
-								echo("4.) of the combined effect of all the three factors stated in (1), (2) and (3)");
-						}
-					 ?></td></tr>
-                      <?php
-					   if(!empty($_POST['3']))
-						{
-					 		if($_POST['3']!='3')
-							{
+					   if(!empty($_POST['3'])){
+					 		if($_POST['3']!='3'){
 								echo('<tr><td style="padding-left:15px;"><b><span style="color:blue">Correct&nbsp; Answer&nbsp;&nbsp;&nbsp; : </span>he leans forward as a matter of habit</b></td></tr>');
 							}
 						}
-						else
-						{
-								echo('<tr><td style="padding-left:15px;"><b><span style="color:blue">Correct&nbsp; Answer&nbsp;&nbsp;&nbsp; : </span>he leans forward as a matter of habit</b></td></tr>');
+						else{
+							echo('<tr><td style="padding-left:15px;"><b><span style="color:blue">Correct&nbsp; Answer&nbsp;&nbsp;&nbsp; : </span>he leans forward as a matter of habit</b></td></tr>');
 						}
 					 ?>
-                     <tr><td><hr></td></tr>
-                     <tr>
+					<tr><td><hr></td></tr>
+					<tr>
                     	<td style="background-color:#efefef;"><span style="font-size:22px;font-weight:bold;padding-left:10px;">Question 4</span></td>
                     </tr>
-                     <tr>
+					<tr>
                       <td><b>Which of the following class of forces is different from others -</b></td>
-                     </tr>
-                     <tr><td style="padding-left:15px;">
-                      <?php
-					   if(!empty($_POST['4']))
-						{
-							 if($_POST['4']=='1')
-							 {
-						 ?>			1.) Pulling of a cart &nbsp;&nbsp;&nbsp;<img src='../wrong.jpg'>
-                         <?php 
-							 }
-							 else
-							 {
-						?>			1.) Pulling of a cart
-                        <?php
-							 }
-						}
-						else
-						{
+					</tr>
+					<tr>
+						<td style="padding-left:15px;">
+						  <?php
+						   if(!empty($_POST['4'])){
+								 if($_POST['4']=='1'){
+							 ?>		1.) Pulling of a cart &nbsp;&nbsp;&nbsp;<img src='../wrong.jpg'>
+							 <?php 
+								}
+								else{
+							?>		1.) Pulling of a cart
+							<?php
+								 }
+							}
+							else{
 								echo("1.) Pulling of a cart");	
-						}
-					?></td></tr>
-                     <tr><td style="padding-left:15px;">
-                     <?php
-					 if(!empty($_POST['4']))
-						{
-					 		if($_POST['4']=='2')
-					 		{
-						 ?>
-                     			2.) Stretching of a coiled spring &nbsp;&nbsp;&nbsp;<img src='../wrong.jpg'>
-                      <?php 
 							}
-							else
-							{
-						?>		2.) Stretching of a coiled spring
-                         <?php
-							}
-						}
-						else
-						{
-								echo("2.) Stretching of a coiled spring");	
-						}
-					?></td></tr>
-                     <tr><td style="padding-left:15px;">
-                     <?php
-					 if(!empty($_POST['4']))
-						{
-					 		if($_POST['4']=='3')
-					 		{
-						 ?>		3.) Kicking of a football &nbsp;&nbsp;&nbsp;<img src='../wrong.jpg'>
-                         <?php 
-							}
-							else
-							{
-						?>		3.) Kicking of a football
-                         <?php
-							}
-						}
-						else
-						{
-								echo("3.) Kicking of a football");
-						}
-					?>
-                         </td></tr>
-                     <tr><td style="padding-left:15px;">
-                     <?php
-					 if(!empty($_POST['4']))
-						{
-					 		if($_POST['4']=='4')
-					 		{
-						 ?>
-                     			4.) Electrical force &nbsp;&nbsp;&nbsp;<img src='../correct.jpg'>
-                      <?php 
-							}
-							else
-							{
 						?>
-                        		4.) Electrical force
-                        <?php
+						</td>
+					</tr>
+					<tr>
+						<td style="padding-left:15px;">
+							 <?php
+							 if(!empty($_POST['4'])){
+									if($_POST['4']=='2'){
+								 ?>
+										2.) Stretching of a coiled spring &nbsp;&nbsp;&nbsp;<img src='../wrong.jpg'>
+							  <?php 
+									}
+									else{
+								?>		2.) Stretching of a coiled spring
+								 <?php
+									}
+								}
+								else{
+									echo("2.) Stretching of a coiled spring");	
+								}
+							?>
+						</td>
+					</tr>
+					<tr>
+						<td style="padding-left:15px;">
+							<?php
+							if(!empty($_POST['4'])){
+									if($_POST['4']=='3'){
+								 ?>		3.) Kicking of a football &nbsp;&nbsp;&nbsp;<img src='../wrong.jpg'>
+								 <?php 
+									}
+									else{
+								?>		3.) Kicking of a football
+								 <?php
+									}
+								}
+								else{
+									echo("3.) Kicking of a football");
+								}
+							?>
+						 </td>
+					 </tr>
+					<tr>
+						<td style="padding-left:15px;">
+						<?php
+							if(!empty($_POST['4'])){
+								if($_POST['4']=='4'){
+							 ?>
+									4.) Electrical force &nbsp;&nbsp;&nbsp;<img src='../correct.jpg'>
+						  <?php 
+								}
+								else{
+							?>
+									4.) Electrical force
+							<?php
+								}
 							}
-						}
-						else
-						{
+							else{
 								echo("4.) Electrical force");
-						}
-					?>
-                     </td></tr>
+							}
+						?>
+						</td>
+					</tr>
                       <?php
-					   if(!empty($_POST['4']))
-						{
-					 		if($_POST['4']!='4')
-							{
+					   if(!empty($_POST['4'])){
+					 		if($_POST['4']!='4'){
 								echo('<tr><td style="padding-left:15px;"><b><span style="color:blue">Correct&nbsp; Answer&nbsp;&nbsp;&nbsp; : </span>Electrical force</b></td></tr>');
 							}
 						}
-						else
-						{
-								echo('<tr><td style="padding-left:15px;"><b><span style="color:blue">Correct&nbsp; Answer&nbsp;&nbsp;&nbsp; : </span>Electrical force</b></td></tr>');
+						else{
+							echo('<tr><td style="padding-left:15px;"><b><span style="color:blue">Correct&nbsp; Answer&nbsp;&nbsp;&nbsp; : </span>Electrical force</b></td></tr>');
 						}
 					 ?>
                      <tr><td><hr></td></tr>
-                     <tr>
+					<tr>
                     	<td style="background-color:#efefef;"><span style="font-size:22px;font-weight:bold;padding-left:10px;">Question 5</span></td>
                     </tr>
-                     <tr>
-                      <td><b>The speed of a falling body increases continuously, this is because -</b></td>
-                     </tr>
-                     <tr><td style="padding-left:15px;">
+					<tr>
+						<td><b>The speed of a falling body increases continuously, this is because -</b></td>
+					</tr>
+					<tr><td style="padding-left:15px;">
                      <?php
-					 if(!empty($_POST['5']))
-						{
-							 if($_POST['5']=='1')
-					 		{
+					 if(!empty($_POST['5'])){
+							 if($_POST['5']=='1'){
 						 ?>		1.) No force acts on it &nbsp;&nbsp;&nbsp;<img src='../wrong.jpg'>
                         <?php 
 							}
-							else
-							{
+							else{
 						?>		1.) No force acts on it
                         <?php
 							}
 						}
-						else
-						{
+						else{
 								echo("1.) No force acts on it");
 						}
-					?> </td></tr>
-                     <tr><td style="padding-left:15px;">
+						?></td>
+					</tr>
+					<tr><td style="padding-left:15px;">
                      <?php
 					 if(!empty($_POST['5']))
 						{
@@ -891,165 +834,150 @@ $tot=0;
 						{
 								echo("2.)  It is very light");	
 						}
-					?></td></tr>
-                     <tr><td style="padding-left:15px;">
-                     <?php
-					 if(!empty($_POST['5']))
-						{
-					 		if($_POST['5']=='3')
-					 		{
+					?>
+					</td></tr>
+					<tr><td style="padding-left:15px;">
+					<?php
+					if(!empty($_POST['5'])){
+					 		if($_POST['5']=='3'){
 						 ?>
-                         		3.) The air exert the frictional force &nbsp;&nbsp;&nbsp;<img src='../wrong.jpg'>
+							3.) The air exert the frictional force &nbsp;&nbsp;&nbsp;<img src='../wrong.jpg'>
                           <?php 
 							}
-							else
-							{
+							else{
 						?>
-                        		3.) The air exert the frictional force
+							3.) The air exert the frictional force
                         <?php
 							}
 						}
-						else
-						{
-								echo("3.) The air exert the frictional force");	
+						else{
+							echo("3.) The air exert the frictional force");	
 						}
 					?></td></tr>
-                     <tr><td style="padding-left:15px;">
+					<tr><td style="padding-left:15px;">
                       <?php
-					  if(!empty($_POST['5']))
-						{
-					 		if($_POST['5']=='4')
-					 		{
+					  if(!empty($_POST['5'])){
+					 		if($_POST['5']=='4'){
 						 ?>		4.) The earth attract it &nbsp;&nbsp;&nbsp;<img src='../correct.jpg'>
                          <?php 
 							}
-							else
-							{
+							else{
 						?>
-                        		4.) The earth attract it
+								4.) The earth attract it
                         <?php
 							}
 						}
-						else
-						{
-								echo("4.) The earth attract it");	
+						else{
+							echo("4.) The earth attract it");	
 						}
 					?></td></tr>
                      <?php
-					  if(!empty($_POST['5']))
-						{
-					 		if($_POST['5']!='4')
-							{
+					  if(!empty($_POST['5'])){
+					 		if($_POST['5']!='4'){
 								echo('<tr><td style="padding-left:15px;"><b><span style="color:blue">Correct&nbsp; Answer&nbsp;&nbsp;&nbsp; : </span>The earth attract it  </b></td></tr>');
 							}
 						}
-						else
-						{
-								echo('<tr><td style="padding-left:15px;"><b><span style="color:blue">Correct&nbsp; Answer&nbsp;&nbsp;&nbsp; : </span>The earth attract it  </b></td></tr>');
+						else{
+							echo('<tr><td style="padding-left:15px;"><b><span style="color:blue">Correct&nbsp; Answer&nbsp;&nbsp;&nbsp; : </span>The earth attract it  </b></td></tr>');
 						}
 					 ?>
                     <tr><td><hr></td></tr>
-                     
-                    </table>
+                     </table>
                     <script>
-						function showlogin()
-						{
+						function showlogin(){
 							document.getElementById("youreg").style.display="none";
 							document.getElementById("loginspan").style.display="inline";	
 						}
 					</script>
-		 </div>
-                </div>
-               <!-- <div class="quizzes">For more quizzes <a href="#openModal">click here</a></div>-->
-	                <div id="openModal" class="modalDialog">
-							<div>
-                            <style>
-							#cross:link {color:blue;}
-							#cross:visited {color: blue;}
-							#cross:hover {color: blue;}
-							#cross:active {color: blue;}
-								
-							</style>
-									<div align="right" ><span style="text-align:right;"><a  href="#close" id='cross' title="Close" class="close">X</a></span></div>
-									<span id='youreg'><span style="font-size:18px;"><center>You can register to practice more Quizzes<br> & <br> <b style="font-size:24px;color:#f6881c;" id="winprize">Win Prizes also.</b></center></span>
-                                    <br><br><br>
-                                    <center onclick='showlogin()'><span style="color:#06F;cursor:pointer;"> Click Here for registration</span></center>
-                                    </span>
-                                    <span id="loginspan" style="display:none;"><center><h2>Create Account</h2></center>
-									<form name="creataccount" action="../creataction.php" method="post" onSubmit="return validate();" enctype="multipart/form-data">
-		<table border='0' style="width:100%; height:250px; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#333;">
-				<tr>
-						<td>Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-						<td><input type="text" name="name" id="name"  class="form2"/></td>
-				</tr>
-				<tr>
-						<td>Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-						<td><input type="text" name="email" id="email"  class="form2"/></td>
-				</tr>
-				<tr>
-						<td>Contact &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-						<td><input type="text" name="phone" id="phone" class="form2" onKeyUp="return numberonly();"/></td>
-				</tr>
-				<tr>
-						<td>Class &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-						<td>
-						<select  name="class" id="class"  class="form2" style="height:28px;width:175px ;  padding:0px;">
-						<option value="0">select</option>
-						<?php
-						$sqlcls=mysql_query("select * from `student_class`");
-						while($rescls=mysql_fetch_array($sqlcls)){
-						?>
-						<option value="<?php echo $rescls['id'];?>"><?php echo $rescls['class'];?></option>
-						<?php
-						}
-						?>
-						</select>
-						<!--<input type="text" name="class" id="class"  class="form2"/>-->
-						</td>
-				</tr>
-				<tr>
-						<td>School &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-						<td><input type="text" name="school" id="school" class="form2"/></td>
-				</tr>
-				<tr>
-						<td>City &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-						<td><input type="text" name="city" id="city" class="form2"/></td>
-				</tr>
-				<tr>
-						<td>Password &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-						<td> <input type="password" name="pass" id="pass" class="form2"/></td>
-				</tr>
-				<tr>
-						<td>Confirm Pwd &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-						<td> <input type="password" name="confirm" id="confirm" class="form2"/></td>
-				</tr>
-				<tr>
-						<td>Upload Photo</td>
-						<td><input type="file" name="fileToUpload" id="fileToUpload" /></td>
-				</tr>
-				<tr>
-						<td colspan='2'>
-								<center>&nbsp;&nbsp;<input type="submit" name="button" value="        Log In        " class="button1" style="background:#69a4ce; border-radius:3px; border:1px solid #5589b0;"/></center>
-						</td>
-				</tr>
-		</table>
-	<!--	<a class="close-reveal-modal">&#215;</a>-->
-		</form>
-						</span>	</div>
-					</div>
-            </div>
-        </div>
-        
-    </div>
-	
-   <div id="myModal1" class="reveal-modal" style="width:400px;">
+				</div>
+			</div>
+		   <!-- <div class="quizzes">For more quizzes <a href="#openModal">click here</a></div>-->
+			<div id="openModal" class="modalDialog">
+				<div>
+					<style>
+						#cross:link {color:blue;}
+						#cross:visited {color: blue;}
+						#cross:hover {color: blue;}
+						#cross:active {color: blue;}
+					</style>
+						<div align="right" ><span style="text-align:right;"><a  href="#close" id='cross' title="Close" class="close">X</a></span></div>
+						<span id='youreg'><span style="font-size:18px;"><center>You can register to practice more Quizzes<br> & <br> <b style="font-size:24px;color:#f6881c;" id="winprize">Win Prizes also.</b></center></span>
+						<br><br><br>
+						<center onclick='showlogin()'><span style="color:#06F;cursor:pointer;"> Click Here for registration</span></center>
+						</span>
+						<span id="loginspan" style="display:none;"><center><h2>Create Account</h2></center>
+						<form name="creataccount" action="../creataction.php" method="post" onSubmit="return validate();" enctype="multipart/form-data">
+							<table border='0' style="width:100%; height:250px; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#333;">
+								<tr>
+									<td>Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+									<td><input type="text" name="name" id="name"  class="form2"/></td>
+								</tr>
+								<tr>
+									<td>Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+									<td><input type="text" name="email" id="email"  class="form2"/></td>
+								</tr>
+								<tr>
+									<td>Contact &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+									<td><input type="text" name="phone" id="phone" class="form2" onKeyUp="return numberonly();"/></td>
+								</tr>
+								<tr>
+									<td>Class &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+									<td>
+										<select  name="class" id="class"  class="form2" style="height:28px;width:175px ;  padding:0px;">
+											<option value="0">select</option>
+											<?php
+											$sqlcls=mysql_query("select * from `student_class`");
+											while($rescls=mysql_fetch_array($sqlcls)){
+											?>
+												<option value="<?php echo $rescls['id'];?>"><?php echo $rescls['class'];?></option>
+											<?php
+											}
+											?>
+										</select>
+										<!--<input type="text" name="class" id="class"  class="form2"/>-->
+									</td>
+								</tr>
+								<tr>
+									<td>School &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+									<td><input type="text" name="school" id="school" class="form2"/></td>
+								</tr>
+								<tr>
+									<td>City &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+									<td><input type="text" name="city" id="city" class="form2"/></td>
+								</tr>
+								<tr>
+									<td>Password &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+									<td> <input type="password" name="pass" id="pass" class="form2"/></td>
+								</tr>
+								<tr>
+									<td>Confirm Pwd &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+									<td> <input type="password" name="confirm" id="confirm" class="form2"/></td>
+								</tr>
+								<tr>
+									<td>Upload Photo</td>
+									<td><input type="file" name="fileToUpload" id="fileToUpload" /></td>
+								</tr>
+								<tr>
+									<td colspan='2'>
+										<center>&nbsp;&nbsp;<input type="submit" name="button" value="        Log In        " class="button1" style="background:#69a4ce; border-radius:3px; border:1px solid #5589b0;"/></center>
+									</td>
+								</tr>
+							</table>
+							<!--	<a class="close-reveal-modal">&#215;</a>-->
+						</form>
+					</span>	
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="myModal1" class="reveal-modal" style="width:400px;">
 	<div class="vide">
-	 Exams are made easy through unique teaching tools in our website. So Students ..no more fear.. !!
-Our educational content is created in a way to improvise the speed and ease of learning by any student of any talent level. Even a weak student can easily cross the exam hurdles by following our education content. A few hours study on our website  in exam time can help you easily pass and excel in the exam.. "			
+		Exams are made easy through unique teaching tools in our website. So Students ..no more fear.. !!
+		Our educational content is created in a way to improvise the speed and ease of learning by any student of any talent level. Even a weak student can easily cross the exam hurdles by following our education content. A few hours study on our website  in exam time can help you easily pass and excel in the exam.. "			
 	</div>
 	<a class="close-reveal-modal">&#215;</a>
-    </div>
-   
-   <?php include_once('footer.php')?>
+</div>
+<?php include_once('footer.php')?>
 </body>
 </html>
