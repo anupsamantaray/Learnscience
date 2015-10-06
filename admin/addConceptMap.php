@@ -153,7 +153,7 @@ function delete_data(vals){
 							<td><?php echo $restopic['topic'];?></td>
 							<td><?php echo $resextra['map_text'];?></td>
 							<td><embed src="../admin/<?php echo $resextra['map_image'];?>" width="100" height="100"></td>
-							<!--td><a href="extra_edit.php?id=<?php echo $resextra['id'];?>"><img src="image/edit.png"></a></td-->
+							<td><a href="concept_map_edit.php?id=<?php echo $resextra['id'];?>"><img src="image/edit.png"></a></td>
 							<td onClick="delete_data(<?php echo $resextra['id']; ?>)"><img src="image/delete.png"></td>
 						</tr>
 						<?php
