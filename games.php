@@ -157,7 +157,7 @@ alert('<?= $mess ?>');
 }
 ?>
 </script>
-<script language=JavaScript>
+<!--script language=JavaScript>
 var message="Function Disabled!";
 function clickIE4(){
 if (event.button==2){
@@ -181,7 +181,7 @@ else if (document.all&&!document.getElementById){
 document.onmousedown=clickIE4;
 }
 document.oncontextmenu=new Function("alert(message);return false")
-</script>
+</script-->
 </head>
 <body style="background:#ccc; background:url(images/bg04.png) repeat #ccc;">
  <!--------------top bar -------->
