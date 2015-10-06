@@ -11,12 +11,12 @@ else{
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
-	function delete_data(vals){
-		var con=confirm("Do you want to delete subject?");
-		if(con){
-		window.location="subject_delete.php?id1="+vals;
-		}
+function delete_data(vals){
+	var con=confirm("Do you want to delete subject?");
+	if(con){
+	window.location="subject_delete.php?id1="+vals;
 	}
+}
 </script>
 
 </head>
@@ -89,6 +89,7 @@ else{
 						<tr>
 							<th>Class Name</th>
 							<th>Subject Name</th>
+							<th>Image</th>
 							<th colspan="2">Action</th>
 						</tr>
 						<?php
@@ -103,6 +104,7 @@ else{
 						<tr>
 							<td><?php echo $ro['class']; ?></td>
 							<td><?php echo $row1['subject'];?></td>
+							<td><img src="<?php echo $row1['image'];?>" width="50" height="50"></td>
 							<td><a href="subject_edit.php?id=<?php echo $row1['id'];?>"><img src="image/edit.png"></a></td>
 							<td onClick="delete_data(<?php echo $row1['id']; ?>)"><img src="image/delete.png"></td>
 						</tr>
