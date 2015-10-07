@@ -5,7 +5,6 @@ include_once("../function.php");
   $resclass=mysql_fetch_array($sqlclass);
 ?>
 <h5>
-	Ebooks For Free Download  
 	<span style="margin: 10px;">
 		CLASS
 	</span>
@@ -30,7 +29,7 @@ if($num!=0){
 		while($res2=mysql_fetch_array($fet2)){
 			$tid=$res2['id'];
 			
-			$fet3=mysql_query("select * from `extra_detail` where `class_id`='$class' and `subject_id`='$subid' and `topic_id`='$tid' AND ebook!=''");
+			$fet3=mysql_query("select * from `student_concept_maps` where `class_id`='$class' and `subject_id`='$subid' and `topic_id`='$tid'");
 		  
 			$nu=mysql_num_rows($fet3);
 	  
@@ -38,14 +37,14 @@ if($num!=0){
 				while($res3=mysql_fetch_array($fet3)){
 				?>
 					<li class="list1">
-						<a href="pdf_server_open.php?file=<?php echo $res3['ebook'];?>" target="_blank" class="inactiveanchor">
-							<!--span style="float: left;"-->
+						<a href="view_concept_map_details.php?map_id=<?php echo $res3['id'];?>" target="_blank" class="inactiveanchor">
 							<span>
 								<?php echo $res2['topic'];?>
 							</span>
 						</a>
-						<a href="pdf_server.php?file=../admin/<?php echo $res3['ebook'];?>">
-							<img src="images/download.png" style="height: 30px;float: right; margin-left: 25px;" />
+						<a href="view_concept_map_details.php?map_id=<?php echo $res3['id'];?>">
+							<!--img src="images/download.png" style="height: 30px;float: right; margin-left: 25px;" /-->
+							<span style="height: 30px;float: right; margin-left: 25px; background-color:#6DB429;">View Concept Map</span>
 						</a>
 					</li>
 					<?php

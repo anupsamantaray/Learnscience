@@ -1,9 +1,7 @@
 <?php
 include_once("../function.php");
-if($_GET['id']){
-	$id=$_GET['id'];
-}else{
-	$id='sub';
+if($_REQUEST['map_id']){
+	$id=$_GET['map_id'];
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -15,69 +13,13 @@ if($_GET['id']){
 <script type='text/javascript' src="../js/jquery-1.6.min.js"></script>
 <link rel="stylesheet" href="reveal.css">	
 <script type="text/javascript" src="jquery.reveal.js"></script>
-<script type="text/javascript">
-function getval(clsval){
-	var type='<?php echo $id;?>';
-	if (type=='ebook'){
-		$.ajax({url:"get_ebook.php?class="+clsval,success:function(result){
-			$(".t1").html(result);
-			}
-		});
-	}
-	else if (type=='video'){
-		$.ajax({url:"getvideo.php?classid="+clsval,success:function(result){
-			$(".t1").html(result);
-			}
-		});
-	}
-	else if (type=='old'){
-		$.ajax({url:"getold.php?class="+clsval,success:function(result){
-			$(".t1").html(result);
-			}
-		});
-	}
-	else if (type=='concept_map'){
-		$.ajax({url:"getConceptMap.php?class="+clsval,success:function(result){
-			$(".t1").html(result);
-			}
-		});
-	}
-	      
-	else{
-		$.ajax({url:"getsub.php?classid="+clsval,success:function(result){
-			$(".t1").html(result);
-			}
-		});
-	}
-}
-$(function(){
-	$('.sp').click(function(){
-	$('.sp').css("color","#666");
-	$(this).css("color","#0070B0");
-	
-	});
-});
-function play(video){
-	$.ajax({url:"start_play.php?vid="+video,success:function(result){
-		$(".vide").show();
-		document.getElementsByClassName("vide")[0].innerHTML=result;
-		}
-	});
-}
-function topval(subval,topvals,clval){
-	$.ajax({url:"topic.php?subid="+subval+'&topid='+topvals+'&classid='+clval,success:function(result){
-		$(".t1").html(result);
-	}
-	});  
-}
-</script>
 </head>
 <body onload="getval('9')">
 	<?php include_once('header1.php')?>
 	<div id="container">
 		<div id="container_content">
 			<div id="page">
-				<div id="container_left">
+				<!--div id="container_left">
 					<div class="heading">
 						<h3>All Class</h3>
 					</div>
@@ -105,8 +47,21 @@ function topval(subval,topvals,clval){
 						}
 						?>
 					</ul>
-				</div>
-				<div id="container_right" class="t1">
+				</div-->
+				<div id="container_right" class="t12">
+					<?php
+						$fetch=mysql_query("select * from `student_concept_maps` WHERE id = '".$id."'");
+						while($rslt=mysql_fetch_array($fetch)){ ?>
+							<div>
+								<?=$rslt['map_text']?>
+							</div><br />
+							<div>
+								<img src="../admin/<?=$rslt['map_image']?>" style="height: 65%; width: 65%;"/>
+							</div>
+							<br /><br /><br />
+					<?php }
+					?>
+					<input type="button" class="backbtn" value="Back" onClick="history.back();">
 				</div>
 			</div>
 		</div>

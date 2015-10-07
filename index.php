@@ -473,6 +473,14 @@ document.oncontextmenu=new Function("alert(message);return false")
 					</a>
 				</li>
 				<li>
+					<a href="courses/wil_index.php?id=concept_map">
+						<span class="product-icon product-item" data-type="icon">
+							<span class="icon-img" style="background : url('images/E%20Book%20Icon%20.jpg') no-repeat center center"></span>
+						</span>
+						<div><h1 class="hover_box myhover">Concept Map</h1></div>
+					</a>
+				</li>
+				<li>
 					<a href="courses/wil_index.php?id=video">
 						<!--<div class="rotate-holder">
 						<span class="product-alternative-text">3</span>
