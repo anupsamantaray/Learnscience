@@ -594,9 +594,9 @@ padding: 10px 0;
 	.myProduct ul{
 		position: relative;
 		padding-right: 0px !important;
-		padding: 15px 115px !important;
+		padding: 15px 0px !important;
 	}
 	.myProduct ul li{
 		padding-bottom: 0 !important;
-		margin: 0 53px !important;
+		margin: 0 50px !important;
 	}

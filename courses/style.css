@@ -219,6 +219,15 @@ text-decoration:none;
     padding: 30px 15px;
     border-left: 1px solid #dedede;
 }
+.newt12{
+	width: 755px;
+	height: auto;
+	float:inherit !important;
+	min-height: auto;
+	margin: 0px auto;
+	padding: 30px 15px;
+	border-left:none !important;
+}
 #container_right a{
 	text-decoration:none;
 	color:#2C65AA;

@@ -48,7 +48,7 @@ if($_REQUEST['map_id']){
 						?>
 					</ul>
 				</div-->
-				<div id="container_right" class="t12">
+				<center><div id="container_right" class="t12" style="float:inherit; border-left:none; margin: 0px auto;">
 					<?php
 						$fetch=mysql_query("select SCM.map_text, SCM.map_image, SC.class, ST.topic from `student_concept_maps` SCM JOIN `student_class` SC ON SCM.class_id = SC.id JOIN `student_topic` ST ON SCM.topic_id = ST.id WHERE SCM.id = '".$id."'");
 						while($rslt=mysql_fetch_array($fetch)){ ?>
@@ -66,7 +66,7 @@ if($_REQUEST['map_id']){
 					<?php }
 					?>
 					<input type="button" class="backbtn" value="Back" onClick="history.back();">
-				</div>
+				</div></center>
 			</div>
 		</div>
 	</div>

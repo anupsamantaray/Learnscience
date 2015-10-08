@@ -38,13 +38,13 @@ if($num!=0){
 				?>
 					<li class="list1">
 						<a href="view_concept_map_details.php?map_id=<?php echo $res3['id'];?>" class="inactiveanchor">
-							<span>
+							<span style="color: #0070B0 !important;">
 								<?php echo $res2['topic'];?>
 							</span>
 						</a>
 						<a href="view_concept_map_details.php?map_id=<?php echo $res3['id'];?>">
 							<!--img src="images/download.png" style="height: 30px;float: right; margin-left: 25px;" /-->
-							<span style="height: 30px;float: right; margin-left: 25px; background-color:#6DB429;">View Concept Map</span>
+							<span style="height: 30px;float: right; margin-left: 25px; border-radius: 5px;"><img src="images/view_map.png" style="height: 30px;float: right; border-radius: 5px;"/></span>
 						</a>
 					</li>
 					<?php
