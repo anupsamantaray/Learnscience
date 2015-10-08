@@ -37,7 +37,7 @@ if($num!=0){
 				while($res3=mysql_fetch_array($fet3)){
 				?>
 					<li class="list1">
-						<a href="view_concept_map_details.php?map_id=<?php echo $res3['id'];?>" target="_blank" class="inactiveanchor">
+						<a href="view_concept_map_details.php?map_id=<?php echo $res3['id'];?>" class="inactiveanchor">
 							<span>
 								<?php echo $res2['topic'];?>
 							</span>

@@ -50,8 +50,12 @@ if($_REQUEST['map_id']){
 				</div-->
 				<div id="container_right" class="t12">
 					<?php
-						$fetch=mysql_query("select * from `student_concept_maps` WHERE id = '".$id."'");
+						$fetch=mysql_query("select SCM.map_text, SCM.map_image, SC.class, ST.topic from `student_concept_maps` SCM JOIN `student_class` SC ON SCM.class_id = SC.id JOIN `student_topic` ST ON SCM.topic_id = ST.id WHERE SCM.id = '".$id."'");
 						while($rslt=mysql_fetch_array($fetch)){ ?>
+							<div>
+								<p>Class : <?=$rslt['class']?></p>
+								<p>Topic : <?=$rslt['topic']?></p>
+							</div>
 							<div>
 								<?=$rslt['map_text']?>
 							</div><br />
