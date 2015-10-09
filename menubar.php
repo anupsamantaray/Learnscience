@@ -46,6 +46,7 @@
 												       <ul>
 													    <li style="background:#ed9e3e;"><a href="pagetest.php">Memory Cards</a></li>
 													    <li style="background:#ed9e3e;"><a href="concept.php">Concept Map</a></li>
+													    <li style="background:#ed9e3e;"><a href="courses/wil_index.php?id=concept_map">Concept Map Details</a></li>
 													    <li style="background:#ed9e3e;"><a href="picture.php">Picture Game</a></li>
 												      </ul>
 												</li>

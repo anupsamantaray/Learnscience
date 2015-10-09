@@ -23,7 +23,11 @@ $rescls=mysql_fetch_array($sqlcls);
                             while($res3=mysql_fetch_array($fet3))
                             {
                             ?>
-                            <h4><?php echo $res3['year'];?><a href="pdf_server.php?file=../admin/<?php echo $res3['oldquestion'];?>"><img src="images/download.png" style="height: 22px;float: right; " /></a></h4>
+                            <h4>
+								<?php echo $res3['year'];?><a href="pdf_server.php?file=../admin/<?php echo $res3['oldquestion'];?>">
+								<img src="images/download.png" style="height: 22px;float: right; " /></a>
+							</h4>
+							
                             <?php }}else{?><h4><?php echo $res3['year'];?><span style="height: 22px;float: right; "><?php echo "No records found";?></span></h4><?php }//}
                             }
 							

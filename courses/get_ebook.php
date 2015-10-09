@@ -44,9 +44,9 @@ if($num!=0){
 								<?php echo $res2['topic'];?>
 							</span>
 						</a>
-						<a href="pdf_server.php?file=../admin/<?php echo $res3['ebook'];?>">
+						<!--a href="pdf_server.php?file=../admin/<?php echo $res3['ebook'];?>">
 							<img src="images/download.png" style="height: 30px;float: right; margin-left: 25px;" />
-						</a>
+						</a-->
 					</li>
 					<?php
 				}
